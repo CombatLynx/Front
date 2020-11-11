@@ -1,1 +1,57 @@
-<p>add-edit-base works!</p>
+<div class="d-flex flex-row bd-highlight mb-3">
+
+  <div class="form-froup row" style="width: 60%;">
+
+    <label class="col-sm-2 col-form-label">BIregDate</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" [(ngModel)]="BIregDate"
+             placeholder="Enter Employee Name">
+    </div>
+
+    <label class="col-sm-2 col-form-label">BIaddress</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="BIaddress"
+             placeholder="Enter Employee Name">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">BIworkTime</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="BIworkTime"
+             placeholder="Enter Employee Name">
+    </div>
+
+    <label class="col-sm-2 col-form-label">BItelephone</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="BItelephone"
+             placeholder="Enter Employee Name">
+    </div>
+
+    <label class="col-sm-2 col-form-label">BIfaxes</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="BIfaxes"
+             placeholder="Enter Employee Name">
+    </div>
+
+    <label class="col-sm-2 col-form-label">BIemail</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="BIemail"
+             placeholder="Enter Employee Name">
+    </div>
+
+  </div>
+  <label class="col-sm-2 col-form-label">BIaddressPlace</label>
+  <div class="ml-3 bd-highlight" style="width: 40%;">
+    <img [src]=PhotoFilePath>
+    <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+  </div>
+</div>
+
+
+<button (click)="addBasicInformation()" *ngIf="base.BIid==0" class="btn btn-primary">
+  Add
+</button>
+
+<button (click)="updateBasicInformation()" *ngIf="base.BIid!=0" class="btn btn-primary">
+  Update
+</button>

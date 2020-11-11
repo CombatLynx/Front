@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedService} from "../../shared.service";
 
 @Component({
   selector: 'app-show-base',
@@ -7,9 +8,60 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowBaseComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: SharedService) { }
+
+  BasicInformationList: any = [];
+
+  ModalTitle: string;
+  ActivateAddEditBaseComp = false;
+  base: any;
 
   ngOnInit(): void {
+    this.refreshBaseList();
+  }
+
+  addClick(){
+    this.base = {
+      BIid: 0,
+      BIregDate: '',
+      BIaddress: '',
+      BIworkTime: '',
+      BItelephone: '',
+      BIfaxes: '',
+      BIemail: '',
+      BIaddressPlace: ''
+    };
+    this.ModalTitle = 'Add BasicInformation';
+    this.ActivateAddEditBaseComp = true;
+
+  }
+
+  editClick(item){
+    console.log(item);
+    this.base = item;
+    this.ModalTitle = 'Edit BasicInformation';
+    this.ActivateAddEditBaseComp = true;
+  }
+
+  deleteClick(item){
+    if (confirm('Are you sure??')){
+      this.service.deleteBasicInformation(item.BIid).subscribe(data => {
+        alert(data.toString());
+        this.refreshBaseList();
+      });
+    }
+  }
+
+  closeClick(){
+    this.ActivateAddEditBaseComp = false;
+    this.refreshBaseList();
+  }
+
+
+  refreshBaseList(){
+    this.service.getBaseList().subscribe(data => {
+      this.BasicInformationList = data;
+    });
   }
 
 }

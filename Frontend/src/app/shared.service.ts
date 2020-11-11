@@ -54,4 +54,20 @@ export class SharedService {
   }
 
 
+  getBaseList(): Observable<any[]>{
+    return this.http.get<any[]>(this.APIUrl + '/basicInformations/');
+  }
+
+  addBasicInformation(val: any){
+    return this.http.post(this.APIUrl + '/basicInformations/', val);
+  }
+
+  updateBasicInformation(val: any){
+    return this.http.put(this.APIUrl + '/basicInformations/', val);
+  }
+
+  deleteBasicInformation(val: any){
+    return this.http.delete(this.APIUrl + '/basicInformations/' + val);
+  }
+
 }
