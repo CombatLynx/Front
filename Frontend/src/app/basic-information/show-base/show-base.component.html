@@ -2,7 +2,7 @@
         data-toggle="modal" data-target="#exampleModal"
         (click)="addClick()"
         data-backdrop="static" data-keyboard="false">
-  Add Basic Information
+  Добавить
 </button>
 
 <!-- Modal -->
@@ -27,17 +27,17 @@
 
 
 
-<table class="table table-striped">
+<table class="table">
   <thead>
-  <tr>
-    <th>BIid</th>
-    <th>BIregDate</th>
-    <th>BIaddress</th>
-    <th>BIworkTime</th>
-    <th>BItelephone</th>
-    <th>BIfaxes</th>
-    <th>BIemail</th>
-    <th>BIaddressPlace</th>
+  <tr class="top__menu">
+    <th>id</th>
+    <th>Дата создания образовательной организации</th>
+    <th>Адрес местонахождения образовательной организации</th>
+    <th>Режим, график работы</th>
+    <th>Контактные телефоны</th>
+    <th>Факсы</th>
+    <th>Адреса электронной почты</th>
+    <th>Сведения о каждом месте осуществления образовательной деятельности</th>
   </tr>
   </thead>
   <tbody>
@@ -60,12 +60,15 @@
           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
         </svg>
       </button>
+
+      <div class="item">
       <button type="button" class="btn btn-light mr-1"
               (click)="deleteClick(dataItem)">
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-        </svg>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+          </svg>
       </button>
+      </div>
     </td>
   </tr>
   </tbody>
