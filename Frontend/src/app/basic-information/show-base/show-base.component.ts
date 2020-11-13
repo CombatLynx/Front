@@ -44,7 +44,7 @@ export class ShowBaseComponent implements OnInit {
   }
 
   deleteClick(item){
-    if (confirm('Are you sure??')){
+    if (confirm('Вы действительно хотите удалить эти данные?')){
       this.service.deleteBasicInformation(item.BIid).subscribe(data => {
         alert(data.toString());
         this.refreshBaseList();
@@ -53,7 +53,7 @@ export class ShowBaseComponent implements OnInit {
   }
 
   renderClick(item){
-    if (confirm('Are you sure? Do you want to publish this data??')){
+    if (confirm('Вы действительно хотите опубликовать эти данные?')){
       this.service.publishData(item.BIid).subscribe(data => {
         alert(data.toString());
         this.refreshBaseList();
