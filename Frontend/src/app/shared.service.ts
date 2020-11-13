@@ -70,4 +70,9 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/basicInformations/' + val);
   }
 
+  publishData(val: any) {
+    console.log('qwe');
+    return this.http.post(this.APIUrl + '/basicInformations/publish/', {id : val});
+  }
+
 }

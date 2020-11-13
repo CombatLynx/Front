@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SharedService} from "../../shared.service";
+import {SharedService} from '../../shared.service';
 
 @Component({
   selector: 'app-show-base',
@@ -46,6 +46,15 @@ export class ShowBaseComponent implements OnInit {
   deleteClick(item){
     if (confirm('Are you sure??')){
       this.service.deleteBasicInformation(item.BIid).subscribe(data => {
+        alert(data.toString());
+        this.refreshBaseList();
+      });
+    }
+  }
+
+  renderClick(item){
+    if (confirm('Are you sure? Do you want to publish this data??')){
+      this.service.publishData(item.BIid).subscribe(data => {
         alert(data.toString());
         this.refreshBaseList();
       });
