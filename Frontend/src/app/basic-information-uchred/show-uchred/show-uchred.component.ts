@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {SharedService} from '../../shared.service';
 
 @Component({
-  selector: 'app-show-dep',
-  templateUrl: './show-dep.component.html',
-  styleUrls: ['./show-dep.component.scss']
+  selector: 'app-show-uchred',
+  templateUrl: './show-uchred.component.html',
+  styleUrls: ['./show-uchred.component.scss']
 })
-export class ShowDepComponent implements OnInit {
+export class ShowUchredComponent implements OnInit {
 
   constructor(private service: SharedService) { }
 
-  DepartmentInfoList: any = [];
+  UchredInfoList: any = [];
   TableFormat: any = [];
 
   ModalTitle: string;
@@ -23,7 +23,7 @@ export class ShowDepComponent implements OnInit {
 
   addClick(){
     this.base = {};
-    this.ModalTitle = 'Add DepartmentInfo';
+    this.ModalTitle = 'Add UchredInfo';
     this.ActivateAddEditBaseComp = true;
 
   }
@@ -31,13 +31,13 @@ export class ShowDepComponent implements OnInit {
   editClick(item){
     console.log(item);
     this.base = item;
-    this.ModalTitle = 'Edit DepartmentInfo';
+    this.ModalTitle = 'Edit UchredInfo';
     this.ActivateAddEditBaseComp = true;
   }
 
   deleteClick(item){
     if (confirm('Вы действительно хотите удалить эти данные?')){
-      this.service.deleteDepartmentInfo(item[0]).subscribe(data => {
+      this.service.deleteUchredInfo(item[0]).subscribe(data => {
         alert(data.toString());
         this.refreshBaseList();
       });
@@ -46,7 +46,7 @@ export class ShowDepComponent implements OnInit {
 
   renderClick(){
     if (confirm('Вы действительно хотите опубликовать эти данные?')){
-      this.service.publishDepartmentInfo().subscribe(data => {
+      this.service.publishUchredInfo().subscribe(data => {
         alert(data.toString());
         this.refreshBaseList();
       });
@@ -60,7 +60,7 @@ export class ShowDepComponent implements OnInit {
 
 
   refreshBaseList(){
-    this.service.getDepartmentInfoList().subscribe(data => {
+    this.service.getUchredInfoList().subscribe(data => {
       const arr: any[] = [];
       // tslint:disable-next-line:forin
       for (const item of data.data) {
@@ -71,7 +71,7 @@ export class ShowDepComponent implements OnInit {
         }
         arr.push(tmp);
       }
-      this.DepartmentInfoList = arr;
+      this.UchredInfoList = arr;
       this.TableFormat = data.format;
       console.log(arr);
     });

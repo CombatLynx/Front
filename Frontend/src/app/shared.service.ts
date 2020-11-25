@@ -71,8 +71,58 @@ export class SharedService {
   }
 
   publishData(val: any) {
-    console.log('qwe');
     return this.http.post(this.APIUrl + '/basicInformations/publish/', {id : val});
   }
 
+  // ОСНОВНЫЕ СВЕДЕНИЯ
+
+  getDepartmentInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/departmentTable/');
+  }
+
+  addDepartmentInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/departmentTable/' + id, val);
+  }
+
+  updateDepartmentInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/departmentTable/' + id, val);
+  }
+
+  deleteDepartmentInfo(val: any){
+    return this.http.delete(this.APIUrl + '/departmentTable/' + val);
+  }
+
+  getDepartmentInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/departmentTable/format');
+  }
+
+  publishDepartmentInfo() {
+    return this.http.get(this.APIUrl + '/departmentTable/publish/');
+  }
+
+  // УЧРЕДИТЕЛИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ
+
+  getUchredInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/uchredTable/');
+  }
+
+  addUchredInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/uchredTable/' + id, val);
+  }
+
+  updateUchredInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/uchredTable/' + id, val);
+  }
+
+  deleteUchredInfo(val: any){
+    return this.http.delete(this.APIUrl + '/uchredTable/' + val);
+  }
+
+  getUchredInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/uchredTable/format');
+  }
+
+  publishUchredInfo() {
+    return this.http.get(this.APIUrl + '/uchredTable/publish/');
+  }
 }

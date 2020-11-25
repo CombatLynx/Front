@@ -1,16 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {SharedService} from 'src/app/shared.service';
+import {Component, Input, OnInit} from '@angular/core';
+import {SharedService} from '../../shared.service';
 
 @Component({
-  selector: 'app-add-edit-dep',
-  templateUrl: './add-edit-dep.component.html',
-  styleUrls: ['./add-edit-dep.component.scss']
+  selector: 'app-add-edit-uchred',
+  templateUrl: './add-edit-uchred.component.html',
+  styleUrls: ['./add-edit-uchred.component.scss']
 })
-export class AddEditDepComponent implements OnInit {
+export class AddEditUchredComponent implements OnInit {
 
   constructor(private service: SharedService) { }
 
-  @Input() dep: any;
+  @Input() uchred: any;
   Keys: any[] = [];
   Values: any[] = [];
 
@@ -22,34 +22,34 @@ export class AddEditDepComponent implements OnInit {
         this.Values.push('');
       }
     }
-    this.Values = this.dep;
+    this.Values = this.uchred;
   }
 
-  addDepartment(){
+  addUchred(){
     const json = {id: this.Values[0]};
     for (let i = 0; i < this.Keys.length; i++) {
       json[String(this.Keys[i])] = String(this.Values[i]);
     }
     console.log(this.Values);
     console.log(json);
-    this.service.addDepartmentInfoList(json.id, json).subscribe(res => {
+    this.service.addUchredInfoList(json.id, json).subscribe(res => {
       alert(res.toString());
     });
   }
 
-  updateDepartment(){
+  updateUchred(){
     const json = {id: this.Values[0]};
     for (let i = 0; i < this.Keys.length; i++) {
       json[String(this.Keys[i])] = String(this.Values[i]);
     }
     console.log(json);
-    this.service.updateDepartmentInfo(json.id, json).subscribe(res => {
+    this.service.updateUchredInfo(json.id, json).subscribe(res => {
       alert(res.toString());
     });
   }
 
   refreshBaseList(){
-    this.service.getDepartmentInfoFormat().subscribe(data => {
+    this.service.getUchredInfoFormat().subscribe(data => {
       this.Keys = data;
       console.log(data);
     });

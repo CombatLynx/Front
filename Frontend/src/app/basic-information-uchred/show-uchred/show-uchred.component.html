@@ -24,8 +24,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-dep [dep]="base" *ngIf="ActivateAddEditBaseComp">
-        </app-add-edit-dep>
+        <app-add-edit-uchred [uchred]="base" *ngIf="ActivateAddEditBaseComp">
+        </app-add-edit-uchred>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let dataItem of DepartmentInfoList">
+  <tr *ngFor="let dataItem of UchredInfoList">
     <td *ngFor="let value of dataItem">{{value}}</td>
     <td>
       <button type="button" class="btn btn-light mr-1"

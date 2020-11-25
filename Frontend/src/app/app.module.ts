@@ -16,6 +16,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BasicInformationComponent } from './basic-information/basic-information.component';
 import { AddEditBaseComponent } from './basic-information/add-edit-base/add-edit-base.component';
 import { ShowBaseComponent } from './basic-information/show-base/show-base.component';
+import { BasicInformationUchredComponent } from './basic-information-uchred/basic-information-uchred.component';
+import { AddEditUchredComponent } from './basic-information-uchred/add-edit-uchred/add-edit-uchred.component';
+import { ShowUchredComponent } from './basic-information-uchred/show-uchred/show-uchred.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ShowBaseComponent } from './basic-information/show-base/show-base.compo
     AddEditEmpComponent,
     BasicInformationComponent,
     AddEditBaseComponent,
-    ShowBaseComponent
+    ShowBaseComponent,
+    BasicInformationUchredComponent,
+    AddEditUchredComponent,
+    ShowUchredComponent,
   ],
   imports: [
     BrowserModule,
