@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {EmployeeComponent} from './employee/employee.component';
 import {DepartmentComponent} from './department/department.component';
-import {BasicInformationComponent} from "./basic-information/basic-information.component";
+import {BasicInformationComponent} from './basic-information/basic-information.component';
 
 
 const routes: Routes = [

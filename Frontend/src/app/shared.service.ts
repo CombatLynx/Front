@@ -74,6 +74,8 @@ export class SharedService {
     return this.http.post(this.APIUrl + '/basicInformations/publish/', {id : val});
   }
 
+// ------------------------------------------------------------------------------------------
+
   getDepartmentInfoList(): Observable<any> {
     return this.http.get<any>(this.APIUrl + '/subdivisions/');
   }
@@ -96,6 +98,32 @@ export class SharedService {
 
   publishDepartmentInfo() {
     return this.http.get(this.APIUrl + '/subdivisions/publish/');
+  }
+
+// ------------------------------------------------------------------------------------------
+
+  getEmployeeInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/basic_informations/');
+  }
+
+  addEmployeeInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/basic_informations/' + id, val);
+  }
+
+  updateEmployeeInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/basic_informations/' + id, val);
+  }
+
+  deleteEmployeeInfo(val: any){
+    return this.http.delete(this.APIUrl + '/basic_informations/' + val);
+  }
+
+  getEmployeeInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/basic_informations/format');
+  }
+
+  publishEmployeeInfo() {
+    return this.http.get(this.APIUrl + '/basic_informations/publish/');
   }
 
 }

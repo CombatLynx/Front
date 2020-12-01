@@ -10,54 +10,70 @@ export class ShowEmpComponent implements OnInit {
 
   constructor(private service: SharedService) { }
 
-  EmployeeList: any = [];
+  EmployeeInfoList: any = [];
+  TableFormat: any = [];
 
   ModalTitle: string;
-  ActivateAddEditEmpComp = false;
-  emp: any;
+  ActivateAddEditBaseComp = false;
+  base: any;
 
   ngOnInit(): void {
-    this.refreshEmpList();
+    this.refreshBaseList();
   }
 
   addClick(){
-    this.emp = {
-      EmployeeId: 0,
-      EmployeeName: '',
-      Department: '',
-      DateOfJoining: '',
-      PhotoFileName: ''
-    };
-    this.ModalTitle = 'Add Employee';
-    this.ActivateAddEditEmpComp = true;
+    this.base = {};
+    this.ModalTitle = 'Add EmployeeInfo';
+    this.ActivateAddEditBaseComp = true;
 
   }
 
   editClick(item){
     console.log(item);
-    this.emp = item;
-    this.ModalTitle = 'Edit Employee';
-    this.ActivateAddEditEmpComp = true;
+    this.base = item;
+    this.ModalTitle = 'Edit EmployeeInfo';
+    this.ActivateAddEditBaseComp = true;
   }
 
   deleteClick(item){
-    if (confirm('Are you sure??')){
-      this.service.deleteEmployee(item.EmployeeId).subscribe(data => {
+    if (confirm('Вы действительно хотите удалить эти данные?')){
+      this.service.deleteEmployeeInfo(item[0]).subscribe(data => {
         alert(data.toString());
-        this.refreshEmpList();
+        this.refreshBaseList();
+      });
+    }
+  }
+
+  renderClick(){
+    if (confirm('Вы действительно хотите опубликовать эти данные?')){
+      this.service.publishEmployeeInfo().subscribe(data => {
+        alert(data.toString());
+        this.refreshBaseList();
       });
     }
   }
 
   closeClick(){
-    this.ActivateAddEditEmpComp = false;
-    this.refreshEmpList();
+    this.ActivateAddEditBaseComp = false;
+    this.refreshBaseList();
   }
 
 
-  refreshEmpList(){
-    this.service.getEmpList().subscribe(data => {
-      this.EmployeeList = data;
+  refreshBaseList(){
+    this.service.getEmployeeInfoList().subscribe(data => {
+      const arr: any[] = [];
+      // tslint:disable-next-line:forin
+      for (const item of data.data) {
+        const tmp: any[] = [];
+        // tslint:disable-next-line:forin
+        for (const key in item) {
+          tmp.push(item[key]);
+        }
+        arr.push(tmp);
+      }
+      this.EmployeeInfoList = arr;
+      this.TableFormat = data.format;
+      console.log(arr);
     });
   }
 

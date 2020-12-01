@@ -11,56 +11,51 @@ export class AddEditEmpComponent implements OnInit {
   constructor(private service: SharedService) { }
 
   @Input() emp: any;
-  EmployeeId: string;
-  EmployeeName: string;
-  Department: string;
-  DateOfJoining: string;
+  Keys: any[] = [];
+  Values: any[] = [];
   PhotoFileName: string;
   PhotoFilePath: string;
 
-  DepartmentsList: any = [];
-
   ngOnInit(): void {
-    this.loadDepartmentList();
-  }
-
-  loadDepartmentList(){
-    this.service.getAllDepartmentNames().subscribe((data: any) => {
-      this.DepartmentsList = data;
-
-      this.EmployeeId = this.emp.EmployeeId;
-      this.EmployeeName = this.emp.EmployeeName;
-      this.Department = this.emp.Department;
-      this.DateOfJoining = this.emp.DateOfJoining;
-      this.PhotoFileName = this.emp.PhotoFileName;
-      this.PhotoFilePath = this.service.PhotoUrl + this.PhotoFileName;
-    });
+    this.refreshBaseList();
+    if (this.Values.length === 0) {
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < this.Values.length; i++) {
+        this.Values.push('');
+      }
+    }
+    this.Values = this.emp;
   }
 
   addEmployee(){
-    const val = {EmployeeId: this.EmployeeId,
-      EmployeeName: this.EmployeeName,
-      Department: this.Department,
-      DateOfJoining: this.DateOfJoining,
-      PhotoFileName: this.PhotoFileName};
-
-    this.service.addEmployee(val).subscribe(res => {
+    const json = {id: this.Values[0]};
+    for (let i = 0; i < this.Keys.length; i++) {
+      json[String(this.Keys[i])] = String(this.Values[i]);
+    }
+    console.log(this.Values);
+    console.log(json);
+    this.service.addEmployeeInfoList(json.id, json).subscribe(res => {
       alert(res.toString());
     });
   }
 
   updateEmployee(){
-    const val = {EmployeeId: this.EmployeeId,
-      EmployeeName: this.EmployeeName,
-      Department: this.Department,
-      DateOfJoining: this.DateOfJoining,
-      PhotoFileName: this.PhotoFileName};
-
-    this.service.updateEmployee(val).subscribe(res => {
+    const json = {id: this.Values[0]};
+    for (let i = 0; i < this.Keys.length; i++) {
+      json[String(this.Keys[i])] = String(this.Values[i]);
+    }
+    console.log(json);
+    this.service.updateEmployeeInfo(json.id, json).subscribe(res => {
       alert(res.toString());
     });
   }
 
+  refreshBaseList(){
+    this.service.getEmployeeInfoFormat().subscribe(data => {
+      this.Keys = data;
+      console.log(data);
+    });
+  }
 
   uploadPhoto(event){
     const file = event.target.files[0];
@@ -72,5 +67,4 @@ export class AddEditEmpComponent implements OnInit {
       this.PhotoFilePath = this.service.PhotoUrl + this.PhotoFileName;
     });
   }
-
 }
