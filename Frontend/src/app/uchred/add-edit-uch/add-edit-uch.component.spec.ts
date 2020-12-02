@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddEditBaseComponent } from './add-edit-base.component';
+import { AddEditUchComponent } from './add-edit-uch.component';
 
-describe('AddEditBaseComponent', () => {
-  let component: AddEditBaseComponent;
-  let fixture: ComponentFixture<AddEditBaseComponent>;
+describe('AddEditUchComponent', () => {
+  let component: AddEditUchComponent;
+  let fixture: ComponentFixture<AddEditUchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddEditBaseComponent ]
+      declarations: [ AddEditUchComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddEditBaseComponent);
+    fixture = TestBed.createComponent(AddEditUchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

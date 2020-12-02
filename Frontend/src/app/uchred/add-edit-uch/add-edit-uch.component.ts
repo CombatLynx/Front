@@ -2,15 +2,15 @@ import {Component, Input, OnInit} from '@angular/core';
 import {SharedService} from '../../shared.service';
 
 @Component({
-  selector: 'app-add-edit-uchred',
-  templateUrl: './add-edit-uchred.component.html',
-  styleUrls: ['./add-edit-uchred.component.scss']
+  selector: 'app-add-edit-uch',
+  templateUrl: './add-edit-uch.component.html',
+  styleUrls: ['./add-edit-uch.component.scss']
 })
-export class AddEditUchredComponent implements OnInit {
+export class AddEditUchComponent implements OnInit {
 
   constructor(private service: SharedService) { }
 
-  @Input() uchred: any;
+  @Input() uch: any;
   Keys: any[] = [];
   Values: any[] = [];
 
@@ -22,7 +22,7 @@ export class AddEditUchredComponent implements OnInit {
         this.Values.push('');
       }
     }
-    this.Values = this.uchred;
+    this.Values = this.uch;
   }
 
   addUchred(){
@@ -54,6 +54,4 @@ export class AddEditUchredComponent implements OnInit {
       console.log(data);
     });
   }
-
 }
-

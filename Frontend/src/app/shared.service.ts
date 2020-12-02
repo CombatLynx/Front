@@ -74,7 +74,7 @@ export class SharedService {
     return this.http.post(this.APIUrl + '/basicInformations/publish/', {id : val});
   }
 
-// ------------------------------------------------------------------------------------------
+// ----------------------- СТРУКТУРНЫЕ ПОДРАЗДЕЛЕНИЯ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ -----------------------------------
 
   getDepartmentInfoList(): Observable<any> {
     return this.http.get<any>(this.APIUrl + '/subdivisions/');
@@ -100,7 +100,7 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/subdivisions/publish/');
   }
 
-// ------------------------------------------------------------------------------------------
+// ------------------------- ОСНОВНЫЕ СВЕДЕНИЯ -----------------------------------------
 
   getEmployeeInfoList(): Observable<any> {
     return this.http.get<any>(this.APIUrl + '/basic_informations/');
@@ -126,4 +126,29 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/basic_informations/publish/');
   }
 
+//  --------------------------- УЧРЕДИТЕЛИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ ----------------------------------
+
+  getUchredInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/founders/');
+  }
+
+  addUchredInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/founders/' + id, val);
+  }
+
+  updateUchredInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/founders/' + id, val);
+  }
+
+  deleteUchredInfo(val: any){
+    return this.http.delete(this.APIUrl + '/founders/' + val);
+  }
+
+  getUchredInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/founders/format');
+  }
+
+  publishUchredInfo() {
+    return this.http.get(this.APIUrl + '/founders/publish/');
+  }
 }

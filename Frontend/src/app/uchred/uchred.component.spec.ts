@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowBaseComponent } from './show-base.component';
+import { UchredComponent } from './uchred.component';
 
-describe('ShowBaseComponent', () => {
-  let component: ShowBaseComponent;
-  let fixture: ComponentFixture<ShowBaseComponent>;
+describe('UchredComponent', () => {
+  let component: UchredComponent;
+  let fixture: ComponentFixture<UchredComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowBaseComponent ]
+      declarations: [ UchredComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShowBaseComponent);
+    fixture = TestBed.createComponent(UchredComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

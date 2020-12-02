@@ -13,9 +13,9 @@ import { SharedService } from './shared.service';
 
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { BasicInformationComponent } from './basic-information/basic-information.component';
-import { AddEditBaseComponent } from './basic-information/add-edit-base/add-edit-base.component';
-import { ShowBaseComponent } from './basic-information/show-base/show-base.component';
+import { UchredComponent } from './uchred/uchred.component';
+import { AddEditUchComponent } from './uchred/add-edit-uch/add-edit-uch.component';
+import { ShowUchComponent } from './uchred/show-uch/show-uch.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +26,9 @@ import { ShowBaseComponent } from './basic-information/show-base/show-base.compo
     EmployeeComponent,
     ShowEmpComponent,
     AddEditEmpComponent,
-    BasicInformationComponent,
-    AddEditBaseComponent,
-    ShowBaseComponent,
+    UchredComponent,
+    AddEditUchComponent,
+    ShowUchComponent
   ],
   imports: [
     BrowserModule,
