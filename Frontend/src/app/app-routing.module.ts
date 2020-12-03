@@ -4,12 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 import {EmployeeComponent} from './employee/employee.component';
 import {DepartmentComponent} from './department/department.component';
 import {UchredComponent} from './uchred/uchred.component';
+import {FiliationComponent} from './filiation/filiation.component';
+import {RepresentationComponent} from './representation/representation.component';
 
 
 const routes: Routes = [
   {path: 'employee', component: EmployeeComponent},
   {path: 'department', component: DepartmentComponent},
-  {path: 'uchred', component: UchredComponent}
+  {path: 'uchred', component: UchredComponent},
+  {path: 'filiation', component: FiliationComponent},
+  {path: 'representation', component: RepresentationComponent}
 ];
 
 @NgModule({

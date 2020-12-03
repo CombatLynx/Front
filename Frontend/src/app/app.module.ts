@@ -16,6 +16,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UchredComponent } from './uchred/uchred.component';
 import { AddEditUchComponent } from './uchred/add-edit-uch/add-edit-uch.component';
 import { ShowUchComponent } from './uchred/show-uch/show-uch.component';
+import { FiliationComponent } from './filiation/filiation.component';
+import { AddEditFilComponent } from './filiation/add-edit-fil/add-edit-fil.component';
+import { ShowFilComponent } from './filiation/show-fil/show-fil.component';
+import { RepresentationComponent } from './representation/representation.component';
+import { AddEditRepComponent } from './representation/add-edit-rep/add-edit-rep.component';
+import { ShowRepComponent } from './representation/show-rep/show-rep.component';
+import { ManagementComponent } from './management/management.component';
+import { AddEditManComponent } from './management/add-edit-man/add-edit-man.component';
+import { ShowManComponent } from './management/show-man/show-man.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +37,16 @@ import { ShowUchComponent } from './uchred/show-uch/show-uch.component';
     AddEditEmpComponent,
     UchredComponent,
     AddEditUchComponent,
-    ShowUchComponent
+    ShowUchComponent,
+    FiliationComponent,
+    AddEditFilComponent,
+    ShowFilComponent,
+    RepresentationComponent,
+    AddEditRepComponent,
+    ShowRepComponent,
+    ManagementComponent,
+    AddEditManComponent,
+    ShowManComponent
   ],
   imports: [
     BrowserModule,
