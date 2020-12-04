@@ -6,6 +6,7 @@ import {DepartmentComponent} from './department/department.component';
 import {UchredComponent} from './uchred/uchred.component';
 import {FiliationComponent} from './filiation/filiation.component';
 import {RepresentationComponent} from './representation/representation.component';
+import {ManagementComponent} from './management/management.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'department', component: DepartmentComponent},
   {path: 'uchred', component: UchredComponent},
   {path: 'filiation', component: FiliationComponent},
-  {path: 'representation', component: RepresentationComponent}
+  {path: 'representation', component: RepresentationComponent},
+  {path: 'management', component: ManagementComponent}
 ];
 
 @NgModule({

@@ -179,7 +179,7 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/filiations/publish/');
   }
 
-  //  --------------------------- ПРЕДСТАВИТЕЛЬСТВО ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ ----------------------------------
+//  --------------------------- ПРЕДСТАВИТЕЛЬСТВО ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ ----------------------------------
 
   getRepresentationInfoList(): Observable<any> {
     return this.http.get<any>(this.APIUrl + '/representations/');
@@ -203,5 +203,31 @@ export class SharedService {
 
   publishRepresentationInfo() {
     return this.http.get(this.APIUrl + '/representations/publish/');
+  }
+
+//  --------------------------- ОРГАНЫ УПРАВЛЕНИЯ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ ----------------------------------
+
+  getManagementInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/managements/');
+  }
+
+  addManagementInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/managements/' + id, val);
+  }
+
+  updateManagementInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/managements/' + id, val);
+  }
+
+  deleteManagementInfo(val: any){
+    return this.http.delete(this.APIUrl + '/managements/' + val);
+  }
+
+  getManagementInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/managements/format');
+  }
+
+  publishManagementInfo() {
+    return this.http.get(this.APIUrl + '/managements/publish/');
   }
 }
