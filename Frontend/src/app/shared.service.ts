@@ -230,4 +230,31 @@ export class SharedService {
   publishManagementInfo() {
     return this.http.get(this.APIUrl + '/managements/publish/');
   }
+
+  //  --------------------------- ФИНАНСОВО-ЭКОНОМИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ ----------------------------------
+
+  getVolumeInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/volumes/');
+  }
+
+  addVolumeInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/volumes/' + id, val);
+  }
+
+  updateVolumeInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/volumes/' + id, val);
+  }
+
+  deleteVolumeInfo(val: any){
+    return this.http.delete(this.APIUrl + '/volumes/' + val);
+  }
+
+  getVolumeInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/volumes/format');
+  }
+
+  publishVolumeInfo() {
+    return this.http.get(this.APIUrl + '/volumes/publish/');
+  }
+
 }

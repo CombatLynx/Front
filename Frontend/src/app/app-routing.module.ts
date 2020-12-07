@@ -7,6 +7,7 @@ import {UchredComponent} from './uchred/uchred.component';
 import {FiliationComponent} from './filiation/filiation.component';
 import {RepresentationComponent} from './representation/representation.component';
 import {ManagementComponent} from './management/management.component';
+import {VolumeComponent} from './volume/volume.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'uchred', component: UchredComponent},
   {path: 'filiation', component: FiliationComponent},
   {path: 'representation', component: RepresentationComponent},
-  {path: 'management', component: ManagementComponent}
+  {path: 'management', component: ManagementComponent},
+  {path: 'volume', component: VolumeComponent}
 ];
 
 @NgModule({
