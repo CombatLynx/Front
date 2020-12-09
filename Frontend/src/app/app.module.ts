@@ -28,6 +28,9 @@ import { ShowManComponent } from './management/show-man/show-man.component';
 import { VolumeComponent } from './volume/volume.component';
 import { AddEditVolComponent } from './volume/add-edit-vol/add-edit-vol.component';
 import { ShowVolComponent } from './volume/show-vol/show-vol.component';
+import { VacComponent } from './vac/vac.component';
+import { AddEditVacComponent } from './vac/add-edit-vac/add-edit-vac.component';
+import { ShowVacComponent } from './vac/show-vac/show-vac.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { ShowVolComponent } from './volume/show-vol/show-vol.component';
     ShowManComponent,
     VolumeComponent,
     AddEditVolComponent,
-    ShowVolComponent
+    ShowVolComponent,
+    VacComponent,
+    AddEditVacComponent,
+    ShowVacComponent
   ],
   imports: [
     BrowserModule,

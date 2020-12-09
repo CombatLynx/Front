@@ -8,6 +8,7 @@ import {FiliationComponent} from './filiation/filiation.component';
 import {RepresentationComponent} from './representation/representation.component';
 import {ManagementComponent} from './management/management.component';
 import {VolumeComponent} from './volume/volume.component';
+import {VacComponent} from './vac/vac.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'filiation', component: FiliationComponent},
   {path: 'representation', component: RepresentationComponent},
   {path: 'management', component: ManagementComponent},
-  {path: 'volume', component: VolumeComponent}
+  {path: 'volume', component: VolumeComponent},
+  {path: 'vac', component: VacComponent}
 ];
 
 @NgModule({

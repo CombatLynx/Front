@@ -257,4 +257,30 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/volumes/publish/');
   }
 
+  //  --------------------------- ВАКАНТНЫЕ МЕСТА ДЛЯ ПРИЁМА (ПЕРЕВОДА) ----------------------------------
+
+  getVacInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/vacs/');
+  }
+
+  addVacInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/vacs/' + id, val);
+  }
+
+  updateVacInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/vacs/' + id, val);
+  }
+
+  deleteVacInfo(val: any){
+    return this.http.delete(this.APIUrl + '/vacs/' + val);
+  }
+
+  getVacInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/vacs/format');
+  }
+
+  publishVacInfo() {
+    return this.http.get(this.APIUrl + '/vacs/publish/');
+  }
+
 }
