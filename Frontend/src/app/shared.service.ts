@@ -283,4 +283,31 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/vacs/publish/');
   }
 
+// ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
+// ----------ИНФОРМАЦИЯ О ПЕРСОНАЛЬНОМ СОСТАВЕ ПЕДАГОГИЧЕСКИХ РАБОТНИКОВ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ-----------------
+
+  getTeacherInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/teachers/');
+  }
+
+  addTeacherInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/teachers/' + id, val);
+  }
+
+  updateTeacherInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/teachers/' + id, val);
+  }
+
+  deleteTeacherInfo(val: any){
+    return this.http.delete(this.APIUrl + '/teachers/' + val);
+  }
+
+  getTeacherInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/teachers/format');
+  }
+
+  publishTeacherInfo() {
+    return this.http.get(this.APIUrl + '/teachers/publish/');
+  }
+
 }

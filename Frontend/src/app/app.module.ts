@@ -31,6 +31,9 @@ import { ShowVolComponent } from './volume/show-vol/show-vol.component';
 import { VacComponent } from './vac/vac.component';
 import { AddEditVacComponent } from './vac/add-edit-vac/add-edit-vac.component';
 import { ShowVacComponent } from './vac/show-vac/show-vac.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import { AddEditTeachComponent } from './teacher/add-edit-teach/add-edit-teach.component';
+import { ShowTeachComponent } from './teacher/show-teach/show-teach.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { ShowVacComponent } from './vac/show-vac/show-vac.component';
     ShowVolComponent,
     VacComponent,
     AddEditVacComponent,
-    ShowVacComponent
+    ShowVacComponent,
+    TeacherComponent,
+    AddEditTeachComponent,
+    ShowTeachComponent
   ],
   imports: [
     BrowserModule,

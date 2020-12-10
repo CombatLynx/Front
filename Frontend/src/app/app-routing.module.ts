@@ -9,6 +9,7 @@ import {RepresentationComponent} from './representation/representation.component
 import {ManagementComponent} from './management/management.component';
 import {VolumeComponent} from './volume/volume.component';
 import {VacComponent} from './vac/vac.component';
+import {TeacherComponent} from './teacher/teacher.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'representation', component: RepresentationComponent},
   {path: 'management', component: ManagementComponent},
   {path: 'volume', component: VolumeComponent},
-  {path: 'vac', component: VacComponent}
+  {path: 'vac', component: VacComponent},
+  {path: 'teacher', component: TeacherComponent}
 ];
 
 @NgModule({
