@@ -12,6 +12,7 @@ import {VacComponent} from './vac/vac.component';
 import {TeacherComponent} from './teacher/teacher.component';
 import {FilialComponent} from './filial/filial.component';
 import {LeaderComponent} from './leader/leader.component';
+import {LeadertwoComponent} from './leadertwo/leadertwo.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'volume', component: VolumeComponent},
   {path: 'vac', component: VacComponent},
   {path: 'leader', component: LeaderComponent},
+  {path: 'leadersTwo', component: LeadertwoComponent},
   {path: 'filialLeader', component: FilialComponent},
   {path: 'teacher', component: TeacherComponent}
 ];

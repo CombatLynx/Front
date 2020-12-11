@@ -40,6 +40,9 @@ import { ShowFilialComponent } from './filial/show-filial/show-filial.component'
 import { LeaderComponent } from './leader/leader.component';
 import { AddEditLeaderComponent } from './leader/add-edit-leader/add-edit-leader.component';
 import { ShowLeaderComponent } from './leader/show-leader/show-leader.component';
+import { LeadertwoComponent } from './leadertwo/leadertwo.component';
+import { AddEditLeadertwoComponent } from './leadertwo/add-edit-leadertwo/add-edit-leadertwo.component';
+import { ShowLeadertwoComponent } from './leadertwo/show-leadertwo/show-leadertwo.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +79,10 @@ import { ShowLeaderComponent } from './leader/show-leader/show-leader.component'
     ShowFilialComponent,
     LeaderComponent,
     AddEditLeaderComponent,
-    ShowLeaderComponent
+    ShowLeaderComponent,
+    LeadertwoComponent,
+    AddEditLeadertwoComponent,
+    ShowLeadertwoComponent
   ],
   imports: [
     BrowserModule,

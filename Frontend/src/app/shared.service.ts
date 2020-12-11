@@ -284,7 +284,7 @@ export class SharedService {
 
 
 // ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
-// ---------------------------ИНФОРМАЦИЯ ОБ АДМИНИСТРАЦИИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ-----------------
+// ---------------------------ИНФОРМАЦИЯ ОБ АДМИНИСТРАЦИИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ(РЕКТОР)-----------------
 
   getLeaderInfoList(): Observable<any> {
     return this.http.get<any>(this.APIUrl + '/leaders/');
@@ -308,6 +308,33 @@ export class SharedService {
 
   publishLeaderInfo() {
     return this.http.get(this.APIUrl + '/leaders/publish/');
+  }
+
+// ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
+// ---------------------------ИНФОРМАЦИЯ ОБ АДМИНИСТРАЦИИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ(ЗАМИСТИТЕЛИ)-----------------
+
+  getLeaderTwoInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/leadersTwo/');
+  }
+
+  addLeaderTwoInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/leadersTwo/' + id, val);
+  }
+
+  updateLeaderTwoInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/leadersTwo/' + id, val);
+  }
+
+  deleteLeaderTwoInfo(val: any){
+    return this.http.delete(this.APIUrl + '/leadersTwo/' + val);
+  }
+
+  getLeaderTwoInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/leadersTwo/format');
+  }
+
+  publishLeaderTwoInfo() {
+    return this.http.get(this.APIUrl + '/leadersTwo/publish/');
   }
 
 // ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
