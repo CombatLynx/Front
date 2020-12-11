@@ -37,6 +37,9 @@ import { ShowTeachComponent } from './teacher/show-teach/show-teach.component';
 import { FilialComponent } from './filial/filial.component';
 import { AddEditFilialComponent } from './filial/add-edit-filial/add-edit-filial.component';
 import { ShowFilialComponent } from './filial/show-filial/show-filial.component';
+import { LeaderComponent } from './leader/leader.component';
+import { AddEditLeaderComponent } from './leader/add-edit-leader/add-edit-leader.component';
+import { ShowLeaderComponent } from './leader/show-leader/show-leader.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +73,10 @@ import { ShowFilialComponent } from './filial/show-filial/show-filial.component'
     ShowTeachComponent,
     FilialComponent,
     AddEditFilialComponent,
-    ShowFilialComponent
+    ShowFilialComponent,
+    LeaderComponent,
+    AddEditLeaderComponent,
+    ShowLeaderComponent
   ],
   imports: [
     BrowserModule,

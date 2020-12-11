@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {FiliationComponent} from "./filiation/filiation.component";
 
 
 @Injectable({
@@ -283,6 +282,33 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/vacs/publish/');
   }
 
+
+// ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
+// ---------------------------ИНФОРМАЦИЯ ОБ АДМИНИСТРАЦИИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ-----------------
+
+  getLeaderInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/leaders/');
+  }
+
+  addLeaderInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/leaders/' + id, val);
+  }
+
+  updateLeaderInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/leaders/' + id, val);
+  }
+
+  deleteLeaderInfo(val: any){
+    return this.http.delete(this.APIUrl + '/leaders/' + val);
+  }
+
+  getLeaderInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/leaders/format');
+  }
+
+  publishLeaderInfo() {
+    return this.http.get(this.APIUrl + '/leaders/publish/');
+  }
 
 // ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
 // ----------ИНФОРМАЦИЯ О РУКОВОДИТЕЛЯХ ФИЛИАЛОВ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ-----------------
