@@ -10,6 +10,7 @@ import {ManagementComponent} from './management/management.component';
 import {VolumeComponent} from './volume/volume.component';
 import {VacComponent} from './vac/vac.component';
 import {TeacherComponent} from './teacher/teacher.component';
+import {FilialComponent} from './filial/filial.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'management', component: ManagementComponent},
   {path: 'volume', component: VolumeComponent},
   {path: 'vac', component: VacComponent},
+  {path: 'filialLeader', component: FilialComponent},
   {path: 'teacher', component: TeacherComponent}
 ];
 

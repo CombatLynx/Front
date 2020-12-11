@@ -283,6 +283,34 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/vacs/publish/');
   }
 
+
+// ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
+// ----------ИНФОРМАЦИЯ О РУКОВОДИТЕЛЯХ ФИЛИАЛОВ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ-----------------
+
+  getFilialLeaderInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/filialLeaders/');
+  }
+
+  addFilialLeaderInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/filialLeaders/' + id, val);
+  }
+
+  updateFilialLeaderInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/filialLeaders/' + id, val);
+  }
+
+  deleteFilialLeaderInfo(val: any){
+    return this.http.delete(this.APIUrl + '/filialLeaders/' + val);
+  }
+
+  getFilialLeaderInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/filialLeaders/format');
+  }
+
+  publishFilialLeaderInfo() {
+    return this.http.get(this.APIUrl + '/filialLeaders/publish/');
+  }
+
 // ------------------------ РУКОВОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ -------------------------------
 // ----------ИНФОРМАЦИЯ О ПЕРСОНАЛЬНОМ СОСТАВЕ ПЕДАГОГИЧЕСКИХ РАБОТНИКОВ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ-----------------
 
