@@ -391,4 +391,29 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/teachers/publish/');
   }
 
+// -------------------------------- ОБРАЗОВАТЕЛЬНЫЕ СТАНДАРТЫ -------------------------------------------------
+
+  getStandartInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/standartCopies/');
+  }
+
+  addStandartInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/standartCopies/' + id, val);
+  }
+
+  updateStandartInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/standartCopies/' + id, val);
+  }
+
+  deleteStandartInfo(val: any){
+    return this.http.delete(this.APIUrl + '/standartCopies/' + val);
+  }
+
+  getStandartInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/standartCopies/format');
+  }
+
+  publishStandartInfo() {
+    return this.http.get(this.APIUrl + '/standartCopies/publish/');
+  }
 }
