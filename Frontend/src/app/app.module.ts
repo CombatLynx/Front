@@ -46,6 +46,9 @@ import { ShowLeadertwoComponent } from './leadertwo/show-leadertwo/show-leadertw
 import { StandartComponent } from './standart/standart.component';
 import { AddEditStanComponent } from './standart/add-edit-stan/add-edit-stan.component';
 import { ShowStanComponent } from './standart/show-stan/show-stan.component';
+import { PaidComponent } from './paid/paid.component';
+import { AddEditPaidComponent } from './paid/add-edit-paid/add-edit-paid.component';
+import { ShowPaidComponent } from './paid/show-paid/show-paid.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +91,10 @@ import { ShowStanComponent } from './standart/show-stan/show-stan.component';
     ShowLeadertwoComponent,
     StandartComponent,
     AddEditStanComponent,
-    ShowStanComponent
+    ShowStanComponent,
+    PaidComponent,
+    AddEditPaidComponent,
+    ShowPaidComponent
   ],
   imports: [
     BrowserModule,

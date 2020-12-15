@@ -14,6 +14,7 @@ import {FilialComponent} from './filial/filial.component';
 import {LeaderComponent} from './leader/leader.component';
 import {LeadertwoComponent} from './leadertwo/leadertwo.component';
 import {StandartComponent} from './standart/standart.component';
+import {PaidComponent} from './paid/paid.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'leadersTwo', component: LeadertwoComponent},
   {path: 'filialLeader', component: FilialComponent},
   {path: 'teacher', component: TeacherComponent},
-  {path: 'standart', component: StandartComponent}
+  {path: 'standart', component: StandartComponent},
+  {path: 'paid', component: PaidComponent}
 ];
 
 @NgModule({

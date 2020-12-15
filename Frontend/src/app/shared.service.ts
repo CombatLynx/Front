@@ -416,4 +416,30 @@ export class SharedService {
   publishStandartInfo() {
     return this.http.get(this.APIUrl + '/standartCopies/publish/');
   }
+
+// -------------------------------- ПЛАТНЫЕ ОБРАЗОВАТЕЛЬНЫЕ УСЛУГИ -------------------------------------------------
+
+  getPaidInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/paidServices/');
+  }
+
+  addPaidInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/paidServices/' + id, val);
+  }
+
+  updatePaidInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/paidServices/' + id, val);
+  }
+
+  deletePaidInfo(val: any){
+    return this.http.delete(this.APIUrl + '/paidServices/' + val);
+  }
+
+  getPaidInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/paidServices/format');
+  }
+
+  publishPaidInfo() {
+    return this.http.get(this.APIUrl + '/paidServices/publish/');
+  }
 }
