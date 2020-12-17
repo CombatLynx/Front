@@ -49,6 +49,12 @@ import { ShowStanComponent } from './standart/show-stan/show-stan.component';
 import { PaidComponent } from './paid/paid.component';
 import { AddEditPaidComponent } from './paid/add-edit-paid/add-edit-paid.component';
 import { ShowPaidComponent } from './paid/show-paid/show-paid.component';
+import { InternationaldogComponent } from './internationaldog/internationaldog.component';
+import { AddEditDogComponent } from './internationaldog/add-edit-dog/add-edit-dog.component';
+import { ShowDogComponent } from './internationaldog/show-dog/show-dog.component';
+import { InternationalaccrComponent } from './internationalaccr/internationalaccr.component';
+import { AddEditAccrComponent } from './internationalaccr/add-edit-accr/add-edit-accr.component';
+import { ShowAccrComponent } from './internationalaccr/show-accr/show-accr.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +100,13 @@ import { ShowPaidComponent } from './paid/show-paid/show-paid.component';
     ShowStanComponent,
     PaidComponent,
     AddEditPaidComponent,
-    ShowPaidComponent
+    ShowPaidComponent,
+    InternationaldogComponent,
+    AddEditDogComponent,
+    ShowDogComponent,
+    InternationalaccrComponent,
+    AddEditAccrComponent,
+    ShowAccrComponent
   ],
   imports: [
     BrowserModule,
