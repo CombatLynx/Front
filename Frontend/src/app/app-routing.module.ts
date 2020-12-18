@@ -15,9 +15,12 @@ import {LeaderComponent} from './leader/leader.component';
 import {LeadertwoComponent} from './leadertwo/leadertwo.component';
 import {StandartComponent} from './standart/standart.component';
 import {PaidComponent} from './paid/paid.component';
-
+import {InternationaldogComponent} from './internationaldog/internationaldog.component';
+import {InternationalaccrComponent} from './internationalaccr/internationalaccr.component';
+import {BasicInformationComponent} from './basic-information/basic-information.component';
 
 const routes: Routes = [
+  {path: 'basicInformations', component: BasicInformationComponent},
   {path: 'employee', component: EmployeeComponent},
   {path: 'department', component: DepartmentComponent},
   {path: 'uchred', component: UchredComponent},
@@ -31,7 +34,9 @@ const routes: Routes = [
   {path: 'filialLeader', component: FilialComponent},
   {path: 'teacher', component: TeacherComponent},
   {path: 'standart', component: StandartComponent},
-  {path: 'paid', component: PaidComponent}
+  {path: 'paid', component: PaidComponent},
+  {path: 'dog', component: InternationaldogComponent},
+  {path: 'accr', component: InternationalaccrComponent}
 ];
 
 @NgModule({

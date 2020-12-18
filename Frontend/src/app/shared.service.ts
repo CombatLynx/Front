@@ -442,4 +442,59 @@ export class SharedService {
   publishPaidInfo() {
     return this.http.get(this.APIUrl + '/paidServices/publish/');
   }
+
+// -------------------------------- МЕЖДУНАРОДНОЕ СОТРУДНИЧЕСТВО -------------------------------------------------
+// ----- ИНФОРМАЦИЯ О ЗАКЛЮЧЕННЫХ И ПЛАНИРУЕМЫХ К ЗАКЛЮЧЕНИЮ ДОГОВОРАХ С ИНОСТРАННЫМИ И (ИЛИ) МЕЖДУНАРОДНЫМИ -----
+// -------------------------- ОРГАНИЗАЦИЯМИ ПО ВОПРОСАМ ОБРАЗОВАНИЯ И НАУКИ --------------------------------------
+
+  getInternationalDogsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/internationalDogs/');
+  }
+
+  addInternationalDogsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/internationalDogs/' + id, val);
+  }
+
+  updateInternationalDogsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/internationalDogs/' + id, val);
+  }
+
+  deleteInternationalDogsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/internationalDogs/' + val);
+  }
+
+  getInternationalDogsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/internationalDogs/format');
+  }
+
+  publishInternationalDogsInfo() {
+    return this.http.get(this.APIUrl + '/internationalDogs/publish/');
+  }
+
+// -------------------------------- МЕЖДУНАРОДНОЕ СОТРУДНИЧЕСТВО -------------------------------------------------
+// --------------------------- ИНФОРМАЦИЯ О МЕЖДУНАРОДНОЙ АККРЕДИТАЦИИ -------------------------------------------
+
+  getInternationalAccrsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/internationalAccrs/');
+  }
+
+  addInternationalAccrsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/internationalAccrs/' + id, val);
+  }
+
+  updateInternationalAccrsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/internationalAccrs/' + id, val);
+  }
+
+  deleteInternationalAccrsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/internationalAccrs/' + val);
+  }
+
+  getInternationalAccrsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/internationalAccrs/format');
+  }
+
+  publishInternationalAccrsInfo() {
+    return this.http.get(this.APIUrl + '/internationalAccrs/publish/');
+  }
 }

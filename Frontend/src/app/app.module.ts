@@ -9,6 +9,9 @@ import { AddEditDepComponent } from './department/add-edit-dep/add-edit-dep.comp
 import { EmployeeComponent } from './employee/employee.component';
 import { ShowEmpComponent } from './employee/show-emp/show-emp.component';
 import { AddEditEmpComponent } from './employee/add-edit-emp/add-edit-emp.component';
+import { BasicInformationComponent } from './basic-information/basic-information.component';
+import { AddEditBaseComponent } from './basic-information/add-edit-base/add-edit-base.component';
+import { ShowBaseComponent } from './basic-information/show-base/show-base.component';
 import { SharedService } from './shared.service';
 
 import {HttpClientModule} from '@angular/common/http';
@@ -59,6 +62,9 @@ import { ShowAccrComponent } from './internationalaccr/show-accr/show-accr.compo
 @NgModule({
   declarations: [
     AppComponent,
+    BasicInformationComponent,
+    AddEditBaseComponent,
+    ShowBaseComponent,
     DepartmentComponent,
     ShowDepComponent,
     AddEditDepComponent,
