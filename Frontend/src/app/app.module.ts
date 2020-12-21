@@ -58,6 +58,9 @@ import { ShowDogComponent } from './internationaldog/show-dog/show-dog.component
 import { InternationalaccrComponent } from './internationalaccr/internationalaccr.component';
 import { AddEditAccrComponent } from './internationalaccr/add-edit-accr/add-edit-accr.component';
 import { ShowAccrComponent } from './internationalaccr/show-accr/show-accr.component';
+import { CabComponent } from './cab/cab.component';
+import { AddEditCabComponent } from './cab/add-edit-cab/add-edit-cab.component';
+import { ShowCabComponent } from './cab/show-cab/show-cab.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +115,10 @@ import { ShowAccrComponent } from './internationalaccr/show-accr/show-accr.compo
     ShowDogComponent,
     InternationalaccrComponent,
     AddEditAccrComponent,
-    ShowAccrComponent
+    ShowAccrComponent,
+    CabComponent,
+    AddEditCabComponent,
+    ShowCabComponent
   ],
   imports: [
     BrowserModule,
