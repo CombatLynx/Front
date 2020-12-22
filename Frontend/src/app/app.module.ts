@@ -61,6 +61,21 @@ import { ShowAccrComponent } from './internationalaccr/show-accr/show-accr.compo
 import { CabComponent } from './cab/cab.component';
 import { AddEditCabComponent } from './cab/add-edit-cab/add-edit-cab.component';
 import { ShowCabComponent } from './cab/show-cab/show-cab.component';
+import { AddEditPracComponent } from './prac/add-edit-prac/add-edit-prac.component';
+import { ShowPracComponent } from './prac/show-prac/show-prac.component';
+import { PracComponent } from './prac/prac.component';
+import { LibComponent } from './lib/lib.component';
+import { AddEditLibComponent } from './lib/add-edit-lib/add-edit-lib.component';
+import { ShowLibComponent } from './lib/show-lib/show-lib.component';
+import { SportComponent } from './sport/sport.component';
+import { AddEditSportComponent } from './sport/add-edit-sport/add-edit-sport.component';
+import { ShowSportComponent } from './sport/show-sport/show-sport.component';
+import { MealComponent } from './meal/meal.component';
+import { AddEditMealComponent } from './meal/add-edit-meal/add-edit-meal.component';
+import { ShowMealComponent } from './meal/show-meal/show-meal.component';
+import { HealthComponent } from './health/health.component';
+import { AddEditHealthComponent } from './health/add-edit-health/add-edit-health.component';
+import { ShowHealthComponent } from './health/show-health/show-health.component';
 
 @NgModule({
   declarations: [
@@ -118,7 +133,22 @@ import { ShowCabComponent } from './cab/show-cab/show-cab.component';
     ShowAccrComponent,
     CabComponent,
     AddEditCabComponent,
-    ShowCabComponent
+    ShowCabComponent,
+    AddEditPracComponent,
+    ShowPracComponent,
+    PracComponent,
+    LibComponent,
+    AddEditLibComponent,
+    ShowLibComponent,
+    SportComponent,
+    AddEditSportComponent,
+    ShowSportComponent,
+    MealComponent,
+    AddEditMealComponent,
+    ShowMealComponent,
+    HealthComponent,
+    AddEditHealthComponent,
+    ShowHealthComponent
   ],
   imports: [
     BrowserModule,

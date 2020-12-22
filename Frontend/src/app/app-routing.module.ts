@@ -19,6 +19,11 @@ import {InternationaldogComponent} from './internationaldog/internationaldog.com
 import {InternationalaccrComponent} from './internationalaccr/internationalaccr.component';
 import {BasicInformationComponent} from './basic-information/basic-information.component';
 import {CabComponent} from './cab/cab.component';
+import {PracComponent} from './prac/prac.component';
+import {LibComponent} from './lib/lib.component';
+import {SportComponent} from './sport/sport.component';
+import {MealComponent} from './meal/meal.component';
+import {HealthComponent} from './health/health.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -38,7 +43,12 @@ const routes: Routes = [
   {path: 'paid', component: PaidComponent},
   {path: 'dog', component: InternationaldogComponent},
   {path: 'accr', component: InternationalaccrComponent},
-  {path: 'cab', component: CabComponent}
+  {path: 'cab', component: CabComponent},
+  {path: 'prac', component: PracComponent},
+  {path: 'lib', component: LibComponent},
+  {path: 'sport', component: SportComponent},
+  {path: 'meal', component: MealComponent},
+  {path: 'health', component: HealthComponent}
 ];
 
 @NgModule({

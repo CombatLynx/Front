@@ -524,4 +524,139 @@ export class SharedService {
   publishSpecCabsInfo() {
     return this.http.get(this.APIUrl + '/specCabs/publish/');
   }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// ----------- Сведения о приспособленных объектах для проведения практических занятий --------------
+
+  getSpecPracsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/specPracs/');
+  }
+
+  addSpecPracsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/specPracs/' + id, val);
+  }
+
+  updateSpecPracsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/specPracs/' + id, val);
+  }
+
+  deleteSpecPracsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/specPracs/' + val);
+  }
+
+  getSpecPracsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/specPracs/format');
+  }
+
+  publishSpecPracsInfo() {
+    return this.http.get(this.APIUrl + '/specPracs/publish/');
+  }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// ---------------------------- Сведения о библиотеке(ах) -------------------------------------------
+
+  getSpecLibsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/specLibs/');
+  }
+
+  addSpecLibsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/specLibs/' + id, val);
+  }
+
+  updateSpecLibsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/specLibs/' + id, val);
+  }
+
+  deleteSpecLibsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/specLibs/' + val);
+  }
+
+  getSpecLibsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/specLibs/format');
+  }
+
+  publishSpecLibsInfo() {
+    return this.http.get(this.APIUrl + '/specLibs/publish/');
+  }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// ---------------------------- Сведения об объектах спорта -----------------------------------------
+
+  getSpecSportsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/specSports/');
+  }
+
+  addSpecSportsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/specSports/' + id, val);
+  }
+
+  updateSpecSportsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/specSports/' + id, val);
+  }
+
+  deleteSpecSportsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/specSports/' + val);
+  }
+
+  getSpecSportsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/specSports/format');
+  }
+
+  publishSpecSportsInfo() {
+    return this.http.get(this.APIUrl + '/specSports/publish/');
+  }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// ---------------------- Сведения об условиях питания обучающихся ----------------------------------
+
+  getSpecMealsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/specMeals/');
+  }
+
+  addSpecMealsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/specMeals/' + id, val);
+  }
+
+  updateSpecMealsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/specMeals/' + id, val);
+  }
+
+  deleteSpecMealsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/specMeals/' + val);
+  }
+
+  getSpecMealsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/specMeals/format');
+  }
+
+  publishSpecMealsInfo() {
+    return this.http.get(this.APIUrl + '/specMeals/publish/');
+  }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// -------------- Сведения об условиях охраны здоровья обучающихся ----------------------------------
+
+  getSpecHealthsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/specHealths/');
+  }
+
+  addSpecHealthsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/specHealths/' + id, val);
+  }
+
+  updateSpecHealthsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/specHealths/' + id, val);
+  }
+
+  deleteSpecHealthsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/specHealths/' + val);
+  }
+
+  getSpecHealthsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/specHealths/format');
+  }
+
+  publishSpecHealthsInfo() {
+    return this.http.get(this.APIUrl + '/specHealths/publish/');
+  }
 }
