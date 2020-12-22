@@ -497,4 +497,31 @@ export class SharedService {
   publishInternationalAccrsInfo() {
     return this.http.get(this.APIUrl + '/internationalAccrs/publish/');
   }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// -------------- Сведения о специально оборудованных учебных кабинетах -------------------------------------------
+
+  getSpecCabsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/specCabs/');
+  }
+
+  addSpecCabsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/specCabs/' + id, val);
+  }
+
+  updateSpecCabsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/specCabs/' + id, val);
+  }
+
+  deleteSpecCabsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/specCabs/' + val);
+  }
+
+  getSpecCabsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/specCabs/format');
+  }
+
+  publishSpecCabsInfo() {
+    return this.http.get(this.APIUrl + '/specCabs/publish/');
+  }
 }

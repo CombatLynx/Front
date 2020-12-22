@@ -18,6 +18,7 @@ import {PaidComponent} from './paid/paid.component';
 import {InternationaldogComponent} from './internationaldog/internationaldog.component';
 import {InternationalaccrComponent} from './internationalaccr/internationalaccr.component';
 import {BasicInformationComponent} from './basic-information/basic-information.component';
+import {CabComponent} from './cab/cab.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path: 'standart', component: StandartComponent},
   {path: 'paid', component: PaidComponent},
   {path: 'dog', component: InternationaldogComponent},
-  {path: 'accr', component: InternationalaccrComponent}
+  {path: 'accr', component: InternationalaccrComponent},
+  {path: 'cab', component: CabComponent}
 ];
 
 @NgModule({
