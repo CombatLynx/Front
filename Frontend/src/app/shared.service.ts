@@ -686,4 +686,31 @@ export class SharedService {
   publishOvzsInfo() {
     return this.http.get(this.APIUrl + '/ovzs/publish/');
   }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// -------------- Ссылки на перечень электронных образовательных ресурсов ---------------------------
+
+  getLinkOvzsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/linkOvzs/');
+  }
+
+  addLinkOvzsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/linkOvzs/' + id, val);
+  }
+
+  updateLinkOvzsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/linkOvzs/' + id, val);
+  }
+
+  deleteLinkOvzsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/linkOvzs/' + val);
+  }
+
+  getLinkOvzsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/linkOvzs/format');
+  }
+
+  publishLinkOvzsInfo() {
+    return this.http.get(this.APIUrl + '/linkOvzs/publish/');
+  }
 }

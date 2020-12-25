@@ -79,6 +79,9 @@ import { ShowHealthComponent } from './health/show-health/show-health.component'
 import { OvzComponent } from './ovz/ovz.component';
 import { AddEditOvzComponent } from './ovz/add-edit-ovz/add-edit-ovz.component';
 import { ShowOvzComponent } from './ovz/show-ovz/show-ovz.component';
+import { LinkovzComponent } from './linkovz/linkovz.component';
+import { AddEditLinkComponent } from './linkovz/add-edit-link/add-edit-link.component';
+import { ShowLinkComponent } from './linkovz/show-link/show-link.component';
 
 @NgModule({
   declarations: [
@@ -154,7 +157,10 @@ import { ShowOvzComponent } from './ovz/show-ovz/show-ovz.component';
     ShowHealthComponent,
     OvzComponent,
     AddEditOvzComponent,
-    ShowOvzComponent
+    ShowOvzComponent,
+    LinkovzComponent,
+    AddEditLinkComponent,
+    ShowLinkComponent
   ],
   imports: [
     BrowserModule,
