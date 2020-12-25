@@ -76,6 +76,9 @@ import { ShowMealComponent } from './meal/show-meal/show-meal.component';
 import { HealthComponent } from './health/health.component';
 import { AddEditHealthComponent } from './health/add-edit-health/add-edit-health.component';
 import { ShowHealthComponent } from './health/show-health/show-health.component';
+import { OvzComponent } from './ovz/ovz.component';
+import { AddEditOvzComponent } from './ovz/add-edit-ovz/add-edit-ovz.component';
+import { ShowOvzComponent } from './ovz/show-ovz/show-ovz.component';
 
 @NgModule({
   declarations: [
@@ -148,7 +151,10 @@ import { ShowHealthComponent } from './health/show-health/show-health.component'
     ShowMealComponent,
     HealthComponent,
     AddEditHealthComponent,
-    ShowHealthComponent
+    ShowHealthComponent,
+    OvzComponent,
+    AddEditOvzComponent,
+    ShowOvzComponent
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,7 @@ import {LibComponent} from './lib/lib.component';
 import {SportComponent} from './sport/sport.component';
 import {MealComponent} from './meal/meal.component';
 import {HealthComponent} from './health/health.component';
+import {OvzComponent} from './ovz/ovz.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -48,7 +49,8 @@ const routes: Routes = [
   {path: 'lib', component: LibComponent},
   {path: 'sport', component: SportComponent},
   {path: 'meal', component: MealComponent},
-  {path: 'health', component: HealthComponent}
+  {path: 'health', component: HealthComponent},
+  {path: 'ovz', component: OvzComponent}
 ];
 
 @NgModule({

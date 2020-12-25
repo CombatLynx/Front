@@ -659,4 +659,31 @@ export class SharedService {
   publishSpecHealthsInfo() {
     return this.http.get(this.APIUrl + '/specHealths/publish/');
   }
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// ----------------------------------- Сведения ----------------------------------
+
+  getOvzsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/ovzs/');
+  }
+
+  addOvzsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/ovzs/' + id, val);
+  }
+
+  updateOvzsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/ovzs/' + id, val);
+  }
+
+  deleteOvzsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/ovzs/' + val);
+  }
+
+  getOvzsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/ovzs/format');
+  }
+
+  publishOvzsInfo() {
+    return this.http.get(this.APIUrl + '/ovzs/publish/');
+  }
 }
