@@ -713,4 +713,32 @@ export class SharedService {
   publishLinkOvzsInfo() {
     return this.http.get(this.APIUrl + '/linkOvzs/publish/');
   }
+
+
+// -------------------------------- Доступная среда -------------------------------------------------
+// ---------------------------------- Сведения 2 ----------------------------------------------------
+
+  getOvzTwosInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/ovzTwos/');
+  }
+
+  addOvzTwosInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/ovzTwos/' + id, val);
+  }
+
+  updateOvzTwosInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/ovzTwos/' + id, val);
+  }
+
+  deleteOvzTwosInfo(val: any){
+    return this.http.delete(this.APIUrl + '/ovzTwos/' + val);
+  }
+
+  getOvzTwosInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/ovzTwos/format');
+  }
+
+  publishOvzTwosInfo() {
+    return this.http.get(this.APIUrl + '/ovzTwos/publish/');
+  }
 }
