@@ -741,4 +741,32 @@ export class SharedService {
   publishOvzTwosInfo() {
     return this.http.get(this.APIUrl + '/ovzTwos/publish/');
   }
+
+
+// -------------------------- СТИПЕНДИИ И ИНЫЕ ВИДЫ МАТЕРИАЛЬНОЙ ПОДДЕРЖКИ -----------------------------------
+// -- ЛОКАЛЬНЫЕ НОРМАТИВНЫЕ АКТЫ, КОТОРЫМИ РЕГЛАМЕНТИРУЮТСЯ НАЛИЧИЕ И УСЛОВИЯ ПРЕДОСТАВЛЕНИЯ СТИПЕНДИЙ -------
+
+  getGrantsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/grants/');
+  }
+
+  addGrantsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/grants/' + id, val);
+  }
+
+  updateGrantsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/grants/' + id, val);
+  }
+
+  deleteGrantsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/grants/' + val);
+  }
+
+  getGrantsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/grants/format');
+  }
+
+  publishGrantsInfo() {
+    return this.http.get(this.APIUrl + '/grants/publish/');
+  }
 }

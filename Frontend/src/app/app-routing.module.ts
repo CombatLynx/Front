@@ -27,6 +27,7 @@ import {HealthComponent} from './health/health.component';
 import {OvzComponent} from './ovz/ovz.component';
 import {LinkovzComponent} from './linkovz/linkovz.component';
 import {OvztwoComponent} from './ovztwo/ovztwo.component';
+import {GrantComponent} from './grant/grant.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -54,7 +55,8 @@ const routes: Routes = [
   {path: 'health', component: HealthComponent},
   {path: 'ovz', component: OvzComponent},
   {path: 'link', component: LinkovzComponent},
-  {path: 'ovztwo', component: OvztwoComponent}
+  {path: 'ovztwo', component: OvztwoComponent},
+  {path: 'grant', component: GrantComponent}
 ];
 
 @NgModule({
