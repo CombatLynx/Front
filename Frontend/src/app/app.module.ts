@@ -94,6 +94,9 @@ import { ShowGinfoComponent } from './grantinfo/show-ginfo/show-ginfo.component'
 import { ActComponent } from './act/act.component';
 import { AddEditActComponent } from './act/add-edit-act/add-edit-act.component';
 import { ShowActComponent } from './act/show-act/show-act.component';
+import { AddEditJobComponent } from './job/add-edit-job/add-edit-job.component';
+import { ShowJobsComponent } from './job/show-job/show-job.component';
+import { JobComponent } from './job/job.component';
 
 @NgModule({
   declarations: [
@@ -184,7 +187,10 @@ import { ShowActComponent } from './act/show-act/show-act.component';
     ShowGinfoComponent,
     ActComponent,
     AddEditActComponent,
-    ShowActComponent
+    ShowActComponent,
+    AddEditJobComponent,
+    ShowJobsComponent,
+    JobComponent
   ],
   imports: [
     BrowserModule,

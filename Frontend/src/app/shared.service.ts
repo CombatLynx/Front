@@ -825,4 +825,32 @@ export class SharedService {
   publishActsInfo() {
     return this.http.get(this.APIUrl + '/acts/publish/');
   }
+
+
+// -------------------------- СТИПЕНДИИ И ИНЫЕ ВИДЫ МАТЕРИАЛЬНОЙ ПОДДЕРЖКИ -----------------------------------
+// Информация о трудоустройстве выпускников
+
+  getJobsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/jobs/');
+  }
+
+  addJobsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/jobs/' + id, val);
+  }
+
+  updateJobsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/jobs/' + id, val);
+  }
+
+  deleteJobsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/jobs/' + val);
+  }
+
+  getJobsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/jobs/format');
+  }
+
+  publishJobsInfo() {
+    return this.http.get(this.APIUrl + '/jobs/publish/');
+  }
 }
