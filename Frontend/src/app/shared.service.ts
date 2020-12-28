@@ -797,4 +797,32 @@ export class SharedService {
   publishGrantInfosInfo() {
     return this.http.get(this.APIUrl + '/grantInfos/publish/');
   }
+
+
+// -------------------------- СТИПЕНДИИ И ИНЫЕ ВИДЫ МАТЕРИАЛЬНОЙ ПОДДЕРЖКИ -----------------------------------
+// Копия локального нормативного акта, регламентирующего размер платы за пользование жилым помещением и коммунальные услуги в общежитии
+
+  getActsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/acts/');
+  }
+
+  addActsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/acts/' + id, val);
+  }
+
+  updateActsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/acts/' + id, val);
+  }
+
+  deleteActsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/acts/' + val);
+  }
+
+  getActsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/acts/format');
+  }
+
+  publishActsInfo() {
+    return this.http.get(this.APIUrl + '/acts/publish/');
+  }
 }

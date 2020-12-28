@@ -91,6 +91,9 @@ import { ShowGrantsComponent } from './grant/show-grant/show-grant.component';
 import { GrantinfoComponent } from './grantinfo/grantinfo.component';
 import { AddEditGinfoComponent } from './grantinfo/add-edit-ginfo/add-edit-ginfo.component';
 import { ShowGinfoComponent } from './grantinfo/show-ginfo/show-ginfo.component';
+import { ActComponent } from './act/act.component';
+import { AddEditActComponent } from './act/add-edit-act/add-edit-act.component';
+import { ShowActComponent } from './act/show-act/show-act.component';
 
 @NgModule({
   declarations: [
@@ -178,7 +181,10 @@ import { ShowGinfoComponent } from './grantinfo/show-ginfo/show-ginfo.component'
     ShowGrantsComponent,
     GrantinfoComponent,
     AddEditGinfoComponent,
-    ShowGinfoComponent
+    ShowGinfoComponent,
+    ActComponent,
+    AddEditActComponent,
+    ShowActComponent
   ],
   imports: [
     BrowserModule,
