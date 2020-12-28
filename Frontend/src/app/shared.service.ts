@@ -769,4 +769,32 @@ export class SharedService {
   publishGrantsInfo() {
     return this.http.get(this.APIUrl + '/grants/publish/');
   }
+
+
+// -------------------------- СТИПЕНДИИ И ИНЫЕ ВИДЫ МАТЕРИАЛЬНОЙ ПОДДЕРЖКИ -----------------------------------
+// ---------------------------------------- Информация -------------------------------------------------------
+
+  getGrantInfosInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/grantInfos/');
+  }
+
+  addGrantInfosInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/grantInfos/' + id, val);
+  }
+
+  updateGrantInfosInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/grantInfos/' + id, val);
+  }
+
+  deleteGrantInfosInfo(val: any){
+    return this.http.delete(this.APIUrl + '/grantInfos/' + val);
+  }
+
+  getGrantInfosInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/grantInfos/format');
+  }
+
+  publishGrantInfosInfo() {
+    return this.http.get(this.APIUrl + '/grantInfos/publish/');
+  }
 }

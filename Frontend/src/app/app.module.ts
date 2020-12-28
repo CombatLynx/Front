@@ -87,7 +87,10 @@ import { AddEditOvztwoComponent } from './ovztwo/add-edit-ovztwo/add-edit-ovztwo
 import { ShowOvztwoComponent } from './ovztwo/show-ovztwo/show-ovztwo.component';
 import { GrantComponent } from './grant/grant.component';
 import { AddEditGrantComponent } from './grant/add-edit-grant/add-edit-grant.component';
-import { ShowGrantComponent } from './grant/show-grant/show-grant.component';
+import { ShowGrantsComponent } from './grant/show-grant/show-grant.component';
+import { GrantinfoComponent } from './grantinfo/grantinfo.component';
+import { AddEditGinfoComponent } from './grantinfo/add-edit-ginfo/add-edit-ginfo.component';
+import { ShowGinfoComponent } from './grantinfo/show-ginfo/show-ginfo.component';
 
 @NgModule({
   declarations: [
@@ -172,7 +175,10 @@ import { ShowGrantComponent } from './grant/show-grant/show-grant.component';
     ShowOvztwoComponent,
     GrantComponent,
     AddEditGrantComponent,
-    ShowGrantComponent
+    ShowGrantsComponent,
+    GrantinfoComponent,
+    AddEditGinfoComponent,
+    ShowGinfoComponent
   ],
   imports: [
     BrowserModule,
