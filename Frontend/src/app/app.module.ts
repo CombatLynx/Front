@@ -100,6 +100,9 @@ import { JobComponent } from './job/job.component';
 import { GosComponent } from './gos/gos.component';
 import { AddEditGosComponent } from './gos/add-edit-gos/add-edit-gos.component';
 import { ShowGosComponent } from './gos/show-gos/show-gos.component';
+import { ProfComponent } from './prof/prof.component';
+import { AddEditProfComponent } from './prof/add-edit-prof/add-edit-prof.component';
+import { ShowProfComponent } from './prof/show-prof/show-prof.component';
 
 @NgModule({
   declarations: [
@@ -196,7 +199,10 @@ import { ShowGosComponent } from './gos/show-gos/show-gos.component';
     JobComponent,
     GosComponent,
     AddEditGosComponent,
-    ShowGosComponent
+    ShowGosComponent,
+    ProfComponent,
+    AddEditProfComponent,
+    ShowProfComponent
   ],
   imports: [
     BrowserModule,

@@ -881,4 +881,32 @@ export class SharedService {
   publishGossInfo() {
     return this.http.get(this.APIUrl + '/gosAccreditations/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Сведения о профессионально-общественной аккредитации образовательной программы (при наличии)
+
+  getProfsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/profs/');
+  }
+
+  addProfsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/profs/' + id, val);
+  }
+
+  updateProfsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/profs/' + id, val);
+  }
+
+  deleteProfsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/profs/' + val);
+  }
+
+  getProfsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/profs/format');
+  }
+
+  publishProfsInfo() {
+    return this.http.get(this.APIUrl + '/profs/publish/');
+  }
 }

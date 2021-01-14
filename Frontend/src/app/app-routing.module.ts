@@ -32,6 +32,7 @@ import {GrantinfoComponent} from './grantinfo/grantinfo.component';
 import {ActComponent} from './act/act.component';
 import {JobComponent} from './job/job.component';
 import {GosComponent} from './gos/gos.component';
+import {ProfComponent} from './prof/prof.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -64,7 +65,8 @@ const routes: Routes = [
   {path: 'grantinfo', component: GrantinfoComponent},
   {path: 'act', component: ActComponent},
   {path: 'job', component: JobComponent},
-  {path: 'gos', component: GosComponent}
+  {path: 'gos', component: GosComponent},
+  {path: 'prof', component: ProfComponent}
 ];
 
 @NgModule({
