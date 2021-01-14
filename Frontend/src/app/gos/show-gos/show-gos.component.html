@@ -24,12 +24,13 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-dog [dog]="base" *ngIf="ActivateAddEditBaseComp">
-        </app-add-edit-dog>
+        <app-add-edit-gos [gos]="base" *ngIf="ActivateAddEditBaseComp">
+        </app-add-edit-gos>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <table class="table">
@@ -39,7 +40,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let dataItem of InternationalDogsInfoList">
+  <tr *ngFor="let dataItem of GossInfoList">
     <td *ngFor="let value of dataItem">{{value}}</td>
     <td>
       <button type="button" class="btn btn-light mr-1"

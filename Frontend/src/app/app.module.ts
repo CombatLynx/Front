@@ -97,6 +97,9 @@ import { ShowActComponent } from './act/show-act/show-act.component';
 import { AddEditJobComponent } from './job/add-edit-job/add-edit-job.component';
 import { ShowJobsComponent } from './job/show-job/show-job.component';
 import { JobComponent } from './job/job.component';
+import { GosComponent } from './gos/gos.component';
+import { AddEditGosComponent } from './gos/add-edit-gos/add-edit-gos.component';
+import { ShowGosComponent } from './gos/show-gos/show-gos.component';
 
 @NgModule({
   declarations: [
@@ -190,7 +193,10 @@ import { JobComponent } from './job/job.component';
     ShowActComponent,
     AddEditJobComponent,
     ShowJobsComponent,
-    JobComponent
+    JobComponent,
+    GosComponent,
+    AddEditGosComponent,
+    ShowGosComponent
   ],
   imports: [
     BrowserModule,

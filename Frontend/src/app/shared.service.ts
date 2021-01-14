@@ -853,4 +853,32 @@ export class SharedService {
   publishJobsInfo() {
     return this.http.get(this.APIUrl + '/jobs/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Информация о реализуемых уровнях образования, о формах обучения, нормативных сроках обучения, сроке действия
+
+  getGossInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/gosAccreditations/');
+  }
+
+  addGossInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/gosAccreditations/' + id, val);
+  }
+
+  updateGossInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/gosAccreditations/' + id, val);
+  }
+
+  deleteGossInfo(val: any){
+    return this.http.delete(this.APIUrl + '/gosAccreditations/' + val);
+  }
+
+  getGossInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/gosAccreditations/format');
+  }
+
+  publishGossInfo() {
+    return this.http.get(this.APIUrl + '/gosAccreditations/publish/');
+  }
 }
