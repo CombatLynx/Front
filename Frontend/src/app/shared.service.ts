@@ -909,4 +909,32 @@ export class SharedService {
   publishProfsInfo() {
     return this.http.get(this.APIUrl + '/profs/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Информация о численности обучающихся по реализуемым образовательным программам по источникам финансирования
+
+  getInfsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/infs/');
+  }
+
+  addInfsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/infs/' + id, val);
+  }
+
+  updateInfsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/infs/' + id, val);
+  }
+
+  deleteInfsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/infs/' + val);
+  }
+
+  getInfsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/infs/format');
+  }
+
+  publishInfsInfo() {
+    return this.http.get(this.APIUrl + '/infs/publish/');
+  }
 }

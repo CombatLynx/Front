@@ -103,6 +103,9 @@ import { ShowGosComponent } from './gos/show-gos/show-gos.component';
 import { ProfComponent } from './prof/prof.component';
 import { AddEditProfComponent } from './prof/add-edit-prof/add-edit-prof.component';
 import { ShowProfComponent } from './prof/show-prof/show-prof.component';
+import { AddEditInfComponent } from './inf/add-edit-inf/add-edit-inf.component';
+import { ShowInfComponent } from './inf/show-inf/show-inf.component';
+import { InfComponent } from './inf/inf.component';
 
 @NgModule({
   declarations: [
@@ -202,7 +205,10 @@ import { ShowProfComponent } from './prof/show-prof/show-prof.component';
     ShowGosComponent,
     ProfComponent,
     AddEditProfComponent,
-    ShowProfComponent
+    ShowProfComponent,
+    AddEditInfComponent,
+    ShowInfComponent,
+    InfComponent
   ],
   imports: [
     BrowserModule,
