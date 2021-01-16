@@ -34,6 +34,7 @@ import {JobComponent} from './job/job.component';
 import {GosComponent} from './gos/gos.component';
 import {ProfComponent} from './prof/prof.component';
 import {InfComponent} from "./inf/inf.component";
+import {AdmisComponent} from "./admis/admis.component";
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -68,7 +69,8 @@ const routes: Routes = [
   {path: 'job', component: JobComponent},
   {path: 'gos', component: GosComponent},
   {path: 'prof', component: ProfComponent},
-  {path: 'inf', component: InfComponent}
+  {path: 'inf', component: InfComponent},
+  {path: 'admis', component: AdmisComponent}
 ];
 
 @NgModule({

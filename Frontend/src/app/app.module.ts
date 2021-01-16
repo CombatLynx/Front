@@ -106,6 +106,9 @@ import { ShowProfComponent } from './prof/show-prof/show-prof.component';
 import { AddEditInfComponent } from './inf/add-edit-inf/add-edit-inf.component';
 import { ShowInfComponent } from './inf/show-inf/show-inf.component';
 import { InfComponent } from './inf/inf.component';
+import { AdmisComponent } from './admis/admis.component';
+import { AddEditAdmisComponent } from './admis/add-edit-admis/add-edit-admis.component';
+import { ShowAdmisComponent } from './admis/show-admis/show-admis.component';
 
 @NgModule({
   declarations: [
@@ -208,7 +211,10 @@ import { InfComponent } from './inf/inf.component';
     ShowProfComponent,
     AddEditInfComponent,
     ShowInfComponent,
-    InfComponent
+    InfComponent,
+    AdmisComponent,
+    AddEditAdmisComponent,
+    ShowAdmisComponent
   ],
   imports: [
     BrowserModule,

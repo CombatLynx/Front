@@ -937,4 +937,32 @@ export class SharedService {
   publishInfsInfo() {
     return this.http.get(this.APIUrl + '/infs/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Информация о результатах приема
+
+  getAdmisInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/admiss/');
+  }
+
+  addAdmisInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/admiss/' + id, val);
+  }
+
+  updateAdmisInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/admiss/' + id, val);
+  }
+
+  deleteAdmisInfo(val: any){
+    return this.http.delete(this.APIUrl + '/admiss/' + val);
+  }
+
+  getAdmisInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/admiss/format');
+  }
+
+  publishAdmisInfo() {
+    return this.http.get(this.APIUrl + '/admiss/publish/');
+  }
 }
