@@ -109,6 +109,9 @@ import { InfComponent } from './inf/inf.component';
 import { AdmisComponent } from './admis/admis.component';
 import { AddEditAdmisComponent } from './admis/add-edit-admis/add-edit-admis.component';
 import { ShowAdmisComponent } from './admis/show-admis/show-admis.component';
+import { PerevComponent } from './perev/perev.component';
+import { AddEditPerevComponent } from './perev/add-edit-perev/add-edit-perev.component';
+import { ShowPerevComponent } from './perev/show-perev/show-perev.component';
 
 @NgModule({
   declarations: [
@@ -214,7 +217,10 @@ import { ShowAdmisComponent } from './admis/show-admis/show-admis.component';
     InfComponent,
     AdmisComponent,
     AddEditAdmisComponent,
-    ShowAdmisComponent
+    ShowAdmisComponent,
+    PerevComponent,
+    AddEditPerevComponent,
+    ShowPerevComponent
   ],
   imports: [
     BrowserModule,

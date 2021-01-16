@@ -965,4 +965,32 @@ export class SharedService {
   publishAdmisInfo() {
     return this.http.get(this.APIUrl + '/admiss/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Информация о результатах перевода, восстановления и отчисления
+
+  getPerevInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/perevs/');
+  }
+
+  addPerevInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/perevs/' + id, val);
+  }
+
+  updatePerevInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/perevs/' + id, val);
+  }
+
+  deletePerevInfo(val: any){
+    return this.http.delete(this.APIUrl + '/perevs/' + val);
+  }
+
+  getPerevInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/perevs/format');
+  }
+
+  publishPerevInfo() {
+    return this.http.get(this.APIUrl + '/perevs/publish/');
+  }
 }
