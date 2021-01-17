@@ -36,6 +36,7 @@ import {ProfComponent} from './prof/prof.component';
 import {InfComponent} from "./inf/inf.component";
 import {AdmisComponent} from "./admis/admis.component";
 import {PerevComponent} from "./perev/perev.component";
+import {ObrazComponent} from "./obraz/obraz.component";
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -72,7 +73,8 @@ const routes: Routes = [
   {path: 'prof', component: ProfComponent},
   {path: 'inf', component: InfComponent},
   {path: 'admis', component: AdmisComponent},
-  {path: 'perev', component: PerevComponent}
+  {path: 'perev', component: PerevComponent},
+  {path: 'obraz', component: ObrazComponent}
 ];
 
 @NgModule({

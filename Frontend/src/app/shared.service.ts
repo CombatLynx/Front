@@ -993,4 +993,32 @@ export class SharedService {
   publishPerevInfo() {
     return this.http.get(this.APIUrl + '/perevs/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Информация об образовательной программе
+
+  getObrazInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/obrazs/');
+  }
+
+  addObrazInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/obrazs/' + id, val);
+  }
+
+  updateObrazInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/obrazs/' + id, val);
+  }
+
+  deleteObrazInfo(val: any){
+    return this.http.delete(this.APIUrl + '/obrazs/' + val);
+  }
+
+  getObrazInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/obrazs/format');
+  }
+
+  publishObrazInfo() {
+    return this.http.get(this.APIUrl + '/obrazs/publish/');
+  }
 }
