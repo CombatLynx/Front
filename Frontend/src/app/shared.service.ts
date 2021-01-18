@@ -1049,4 +1049,32 @@ export class SharedService {
   publishPracticesInfo() {
     return this.http.get(this.APIUrl + '/practics/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Информация о направлениях и результатах научной (научно-исследовательской) деятельности
+
+  getSciencsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/sciencs/');
+  }
+
+  addSciencsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/sciencs/' + id, val);
+  }
+
+  updateSciencsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/sciencs/' + id, val);
+  }
+
+  deleteSciencsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/sciencs/' + val);
+  }
+
+  getSciencsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/sciencs/format');
+  }
+
+  publishSciencsInfo() {
+    return this.http.get(this.APIUrl + '/sciencs/publish/');
+  }
 }

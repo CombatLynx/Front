@@ -118,6 +118,9 @@ import { ShowObrazComponent } from './obraz/show-obraz/show-obraz.component';
 import { PracticesComponent } from './practices/practices.component';
 import { AddEditPracticesComponent } from './practices/add-edit-practices/add-edit-practices.component';
 import { ShowPracticesComponent } from './practices/show-practices/show-practices.component';
+import { SciencsComponent } from './sciencs/sciencs.component';
+import { AddEditSciencsComponent } from './sciencs/add-edit-sciencs/add-edit-sciencs.component';
+import { ShowSciencsComponent } from './sciencs/show-sciencs/show-sciencs.component';
 
 @NgModule({
   declarations: [
@@ -232,7 +235,10 @@ import { ShowPracticesComponent } from './practices/show-practices/show-practice
     ShowObrazComponent,
     PracticesComponent,
     AddEditPracticesComponent,
-    ShowPracticesComponent
+    ShowPracticesComponent,
+    SciencsComponent,
+    AddEditSciencsComponent,
+    ShowSciencsComponent
   ],
   imports: [
     BrowserModule,
