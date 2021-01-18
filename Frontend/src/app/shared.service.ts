@@ -1021,4 +1021,32 @@ export class SharedService {
   publishObrazInfo() {
     return this.http.get(this.APIUrl + '/obrazs/publish/');
   }
+
+
+// -------------------------- Образование -----------------------------------
+// Информация об адаптированной образовательной программе
+
+  getPracticesInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/practics/');
+  }
+
+  addPracticesInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/practics/' + id, val);
+  }
+
+  updatePracticesInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/practics/' + id, val);
+  }
+
+  deletePracticesInfo(val: any){
+    return this.http.delete(this.APIUrl + '/practics/' + val);
+  }
+
+  getPracticesInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/practics/format');
+  }
+
+  publishPracticesInfo() {
+    return this.http.get(this.APIUrl + '/practics/publish/');
+  }
 }
