@@ -1191,4 +1191,32 @@ export class SharedService {
   publishLibraresInfo() {
     return this.http.get(this.APIUrl + '/librares/publish/');
   }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Сведения о наличии объектов спорта
+
+  getSportsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/sports/');
+  }
+
+  addSportsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/sports/' + id, val);
+  }
+
+  updateSportsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/sports/' + id, val);
+  }
+
+  deleteSportsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/sports/' + val);
+  }
+
+  getSportsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/sports/format');
+  }
+
+  publishSportsInfo() {
+    return this.http.get(this.APIUrl + '/sports/publish/');
+  }
 }

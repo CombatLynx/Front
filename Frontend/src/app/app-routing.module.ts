@@ -33,16 +33,17 @@ import {ActComponent} from './act/act.component';
 import {JobComponent} from './job/job.component';
 import {GosComponent} from './gos/gos.component';
 import {ProfComponent} from './prof/prof.component';
-import {InfComponent} from "./inf/inf.component";
-import {AdmisComponent} from "./admis/admis.component";
-import {PerevComponent} from "./perev/perev.component";
-import {ObrazComponent} from "./obraz/obraz.component";
+import {InfComponent} from './inf/inf.component';
+import {AdmisComponent} from './admis/admis.component';
+import {PerevComponent} from './perev/perev.component';
+import {ObrazComponent} from './obraz/obraz.component';
 import {PracticesComponent} from './practices/practices.component';
 import {SciencsComponent} from './sciencs/sciencs.component';
 import {SvedorgComponent} from './svedorg/svedorg.component';
 import {FacilitiesComponent} from './facilities/facilities.component';
 import {ObjpractsComponent} from './objpracts/objpracts.component';
 import {LibraresComponent} from './librares/librares.component';
+import {SportsComponent} from './sports/sports.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -86,7 +87,8 @@ const routes: Routes = [
   {path: 'svedorg', component: SvedorgComponent},
   {path: 'facilits', component: FacilitiesComponent},
   {path: 'objPracts', component: ObjpractsComponent},
-  {path: 'librares', component: LibraresComponent}
+  {path: 'librares', component: LibraresComponent},
+  {path: 'sports', component: SportsComponent}
 ];
 
 @NgModule({
