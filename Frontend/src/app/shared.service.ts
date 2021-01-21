@@ -1163,4 +1163,32 @@ export class SharedService {
   publishObjPractsInfo() {
     return this.http.get(this.APIUrl + '/objPracts/publish/');
   }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Сведения наличии библиотек
+
+  getLibraresInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/librares/');
+  }
+
+  addLibraresInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/librares/' + id, val);
+  }
+
+  updateLibraresInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/librares/' + id, val);
+  }
+
+  deleteLibraresInfo(val: any){
+    return this.http.delete(this.APIUrl + '/librares/' + val);
+  }
+
+  getLibraresInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/librares/format');
+  }
+
+  publishLibraresInfo() {
+    return this.http.get(this.APIUrl + '/librares/publish/');
+  }
 }

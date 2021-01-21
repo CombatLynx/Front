@@ -42,6 +42,7 @@ import {SciencsComponent} from './sciencs/sciencs.component';
 import {SvedorgComponent} from './svedorg/svedorg.component';
 import {FacilitiesComponent} from './facilities/facilities.component';
 import {ObjpractsComponent} from './objpracts/objpracts.component';
+import {LibraresComponent} from './librares/librares.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -84,7 +85,8 @@ const routes: Routes = [
   {path: 'sciencs', component: SciencsComponent},
   {path: 'svedorg', component: SvedorgComponent},
   {path: 'facilits', component: FacilitiesComponent},
-  {path: 'objPracts', component: ObjpractsComponent}
+  {path: 'objPracts', component: ObjpractsComponent},
+  {path: 'librares', component: LibraresComponent}
 ];
 
 @NgModule({

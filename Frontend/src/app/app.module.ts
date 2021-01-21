@@ -130,6 +130,9 @@ import { ShowFacilitiesComponent } from './facilities/show-facilities/show-facil
 import { ObjpractsComponent } from './objpracts/objpracts.component';
 import { AddEditObjpractsComponent } from './objpracts/add-edit-objpracts/add-edit-objpracts.component';
 import { ShowObjpractsComponent } from './objpracts/show-objpracts/show-objpracts.component';
+import { AddEditLibraresComponent } from './librares/add-edit-librares/add-edit-librares.component';
+import { LibraresComponent } from './librares/librares.component';
+import { ShowLibraresComponent } from './librares/show-librares/show-librares.component';
 
 @NgModule({
   declarations: [
@@ -256,7 +259,10 @@ import { ShowObjpractsComponent } from './objpracts/show-objpracts/show-objpract
     ShowFacilitiesComponent,
     ObjpractsComponent,
     AddEditObjpractsComponent,
-    ShowObjpractsComponent
+    ShowObjpractsComponent,
+    AddEditLibraresComponent,
+    LibraresComponent,
+    ShowLibraresComponent
   ],
   imports: [
     BrowserModule,
