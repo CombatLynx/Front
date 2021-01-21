@@ -127,6 +127,9 @@ import { ShowSvedorgComponent } from './svedorg/show-svedorg/show-svedorg.compon
 import { AddEditFacilitiesComponent } from './facilities/add-edit-facilities/add-edit-facilities.component';
 import { FacilitiesComponent } from './facilities/facilities.component';
 import { ShowFacilitiesComponent } from './facilities/show-facilities/show-facilities.component';
+import { ObjpractsComponent } from './objpracts/objpracts.component';
+import { AddEditObjpractsComponent } from './objpracts/add-edit-objpracts/add-edit-objpracts.component';
+import { ShowObjpractsComponent } from './objpracts/show-objpracts/show-objpracts.component';
 
 @NgModule({
   declarations: [
@@ -250,7 +253,10 @@ import { ShowFacilitiesComponent } from './facilities/show-facilities/show-facil
     ShowSvedorgComponent,
     AddEditFacilitiesComponent,
     FacilitiesComponent,
-    ShowFacilitiesComponent
+    ShowFacilitiesComponent,
+    ObjpractsComponent,
+    AddEditObjpractsComponent,
+    ShowObjpractsComponent
   ],
   imports: [
     BrowserModule,

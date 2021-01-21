@@ -1135,4 +1135,32 @@ export class SharedService {
   publishFacilitInfo() {
     return this.http.get(this.APIUrl + '/facilits/publish/');
   }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Сведения о наличии объектов для проведения практических занятий
+
+  getObjPractsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/objPracts/');
+  }
+
+  addObjPractsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/objPracts/' + id, val);
+  }
+
+  updateObjPractsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/objPracts/' + id, val);
+  }
+
+  deleteObjPractsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/objPracts/' + val);
+  }
+
+  getObjPractsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/objPracts/format');
+  }
+
+  publishObjPractsInfo() {
+    return this.http.get(this.APIUrl + '/objPracts/publish/');
+  }
 }
