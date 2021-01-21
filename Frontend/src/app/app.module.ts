@@ -121,6 +121,9 @@ import { ShowPracticesComponent } from './practices/show-practices/show-practice
 import { SciencsComponent } from './sciencs/sciencs.component';
 import { AddEditSciencsComponent } from './sciencs/add-edit-sciencs/add-edit-sciencs.component';
 import { ShowSciencsComponent } from './sciencs/show-sciencs/show-sciencs.component';
+import { SvedorgComponent } from './svedorg/svedorg.component';
+import { AddEditSvedorgComponent } from './svedorg/add-edit-svedorg/add-edit-svedorg.component';
+import { ShowSvedorgComponent } from './svedorg/show-svedorg/show-svedorg.component';
 
 @NgModule({
   declarations: [
@@ -238,7 +241,10 @@ import { ShowSciencsComponent } from './sciencs/show-sciencs/show-sciencs.compon
     ShowPracticesComponent,
     SciencsComponent,
     AddEditSciencsComponent,
-    ShowSciencsComponent
+    ShowSciencsComponent,
+    SvedorgComponent,
+    AddEditSvedorgComponent,
+    ShowSvedorgComponent
   ],
   imports: [
     BrowserModule,

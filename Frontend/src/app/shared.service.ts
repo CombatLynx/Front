@@ -1077,4 +1077,34 @@ export class SharedService {
   publishSciencsInfo() {
     return this.http.get(this.APIUrl + '/sciencs/publish/');
   }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+//   Сведения о каждом месте осуществления образовательной деятельности, в том числе не указываемых в соответствии с частью 4 статьи 91
+//   Федерального закона от 29.12.2012 N 273-ФЗ "Об образовании в Российской Федерации" (Собрание законодательства Российской Федерации,
+//   2012, N 53, ст. 7598; 2019, N 49, ст. 6962) в приложении к лицензии на осуществление образовательной деятельности
+
+  getSvedOrgInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/svedOrgs/');
+  }
+
+  addSvedOrgInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/svedOrgs/' + id, val);
+  }
+
+  updateSvedOrgInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/svedOrgs/' + id, val);
+  }
+
+  deleteSvedOrgInfo(val: any){
+    return this.http.delete(this.APIUrl + '/svedOrgs/' + val);
+  }
+
+  getSvedOrgInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/svedOrgs/format');
+  }
+
+  publishSvedOrgInfo() {
+    return this.http.get(this.APIUrl + '/svedOrgs/publish/');
+  }
 }

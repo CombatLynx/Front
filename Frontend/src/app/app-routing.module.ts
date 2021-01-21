@@ -39,6 +39,7 @@ import {PerevComponent} from "./perev/perev.component";
 import {ObrazComponent} from "./obraz/obraz.component";
 import {PracticesComponent} from './practices/practices.component';
 import {SciencsComponent} from './sciencs/sciencs.component';
+import {SvedorgComponent} from './svedorg/svedorg.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -78,7 +79,8 @@ const routes: Routes = [
   {path: 'perev', component: PerevComponent},
   {path: 'obraz', component: ObrazComponent},
   {path: 'practices', component: PracticesComponent},
-  {path: 'sciencs', component: SciencsComponent}
+  {path: 'sciencs', component: SciencsComponent},
+  {path: 'svedorg', component: SvedorgComponent}
 ];
 
 @NgModule({
