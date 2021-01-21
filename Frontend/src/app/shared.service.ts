@@ -1107,4 +1107,32 @@ export class SharedService {
   publishSvedOrgInfo() {
     return this.http.get(this.APIUrl + '/svedOrgs/publish/');
   }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+//   Сведения о наличии оборудованных учебных кабинетов
+
+  getFacilitInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/facilits/');
+  }
+
+  addFacilitInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/facilits/' + id, val);
+  }
+
+  updateFacilitInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/facilits/' + id, val);
+  }
+
+  deleteFacilitInfo(val: any){
+    return this.http.delete(this.APIUrl + '/facilits/' + val);
+  }
+
+  getFacilitInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/facilits/format');
+  }
+
+  publishFacilitInfo() {
+    return this.http.get(this.APIUrl + '/facilits/publish/');
+  }
 }

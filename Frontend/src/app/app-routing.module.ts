@@ -40,6 +40,7 @@ import {ObrazComponent} from "./obraz/obraz.component";
 import {PracticesComponent} from './practices/practices.component';
 import {SciencsComponent} from './sciencs/sciencs.component';
 import {SvedorgComponent} from './svedorg/svedorg.component';
+import {FacilitiesComponent} from './facilities/facilities.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -80,7 +81,8 @@ const routes: Routes = [
   {path: 'obraz', component: ObrazComponent},
   {path: 'practices', component: PracticesComponent},
   {path: 'sciencs', component: SciencsComponent},
-  {path: 'svedorg', component: SvedorgComponent}
+  {path: 'svedorg', component: SvedorgComponent},
+  {path: 'facilits', component: FacilitiesComponent}
 ];
 
 @NgModule({
