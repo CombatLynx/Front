@@ -1219,4 +1219,32 @@ export class SharedService {
   publishSportsInfo() {
     return this.http.get(this.APIUrl + '/sports/publish/');
   }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Сведения об условиях питания обучающихся
+
+  getMealsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/meals/');
+  }
+
+  addMealsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/meals/' + id, val);
+  }
+
+  updateMealsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/meals/' + id, val);
+  }
+
+  deleteMealsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/meals/' + val);
+  }
+
+  getMealsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/meals/format');
+  }
+
+  publishMealsInfo() {
+    return this.http.get(this.APIUrl + '/meals/publish/');
+  }
 }

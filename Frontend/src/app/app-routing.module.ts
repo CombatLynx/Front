@@ -44,6 +44,7 @@ import {FacilitiesComponent} from './facilities/facilities.component';
 import {ObjpractsComponent} from './objpracts/objpracts.component';
 import {LibraresComponent} from './librares/librares.component';
 import {SportsComponent} from './sports/sports.component';
+import {MealsComponent} from './meals/meals.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -88,7 +89,8 @@ const routes: Routes = [
   {path: 'facilits', component: FacilitiesComponent},
   {path: 'objPracts', component: ObjpractsComponent},
   {path: 'librares', component: LibraresComponent},
-  {path: 'sports', component: SportsComponent}
+  {path: 'sports', component: SportsComponent},
+  {path: 'meals', component: MealsComponent}
 ];
 
 @NgModule({

@@ -136,6 +136,9 @@ import { ShowLibraresComponent } from './librares/show-librares/show-librares.co
 import { SportsComponent } from './sports/sports.component';
 import { AddEditSportsComponent } from './sports/add-edit-sports/add-edit-sports.component';
 import { ShowSportsComponent } from './sports/show-sports/show-sports.component';
+import { MealsComponent } from './meals/meals.component';
+import { AddEditMealsComponent } from './meals/add-edit-meals/add-edit-meals.component';
+import { ShowMealsComponent } from './meals/show-meals/show-meals.component';
 
 @NgModule({
   declarations: [
@@ -268,7 +271,10 @@ import { ShowSportsComponent } from './sports/show-sports/show-sports.component'
     ShowLibraresComponent,
     SportsComponent,
     AddEditSportsComponent,
-    ShowSportsComponent
+    ShowSportsComponent,
+    MealsComponent,
+    AddEditMealsComponent,
+    ShowMealsComponent
   ],
   imports: [
     BrowserModule,
