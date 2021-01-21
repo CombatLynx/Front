@@ -45,6 +45,7 @@ import {ObjpractsComponent} from './objpracts/objpracts.component';
 import {LibraresComponent} from './librares/librares.component';
 import {SportsComponent} from './sports/sports.component';
 import {MealsComponent} from './meals/meals.component';
+import {HealtComponent} from './healt/healt.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -90,7 +91,8 @@ const routes: Routes = [
   {path: 'objPracts', component: ObjpractsComponent},
   {path: 'librares', component: LibraresComponent},
   {path: 'sports', component: SportsComponent},
-  {path: 'meals', component: MealsComponent}
+  {path: 'meals', component: MealsComponent},
+  {path: 'healts', component: HealtComponent}
 ];
 
 @NgModule({

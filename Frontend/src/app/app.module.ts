@@ -139,6 +139,9 @@ import { ShowSportsComponent } from './sports/show-sports/show-sports.component'
 import { MealsComponent } from './meals/meals.component';
 import { AddEditMealsComponent } from './meals/add-edit-meals/add-edit-meals.component';
 import { ShowMealsComponent } from './meals/show-meals/show-meals.component';
+import { HealtComponent } from './healt/healt.component';
+import { AddEditHealtComponent } from './healt/add-edit-healt/add-edit-healt.component';
+import { ShowHealtComponent } from './healt/show-healt/show-healt.component';
 
 @NgModule({
   declarations: [
@@ -274,7 +277,10 @@ import { ShowMealsComponent } from './meals/show-meals/show-meals.component';
     ShowSportsComponent,
     MealsComponent,
     AddEditMealsComponent,
-    ShowMealsComponent
+    ShowMealsComponent,
+    HealtComponent,
+    AddEditHealtComponent,
+    ShowHealtComponent
   ],
   imports: [
     BrowserModule,
