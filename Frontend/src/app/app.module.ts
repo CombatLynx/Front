@@ -142,6 +142,27 @@ import { ShowMealsComponent } from './meals/show-meals/show-meals.component';
 import { HealtComponent } from './healt/healt.component';
 import { AddEditHealtComponent } from './healt/add-edit-healt/add-edit-healt.component';
 import { ShowHealtComponent } from './healt/show-healt/show-healt.component';
+import { OneComponent } from './one/one.component';
+import { AddEditOneComponent } from './one/add-edit-one/add-edit-one.component';
+import { ShowOneComponent } from './one/show-one/show-one.component';
+import { TwoComponent } from './two/two.component';
+import { AddEditTwoComponent } from './two/add-edit-two/add-edit-two.component';
+import { ShowTwoComponent } from './two/show-two/show-two.component';
+import { ThreeComponent } from './three/three.component';
+import { AddEditThreeComponent } from './three/add-edit-three/add-edit-three.component';
+import { ShowThreeComponent } from './three/show-three/show-three.component';
+import { FourComponent } from './four/four.component';
+import { AddEditFourComponent } from './four/add-edit-four/add-edit-four.component';
+import { ShowFourComponent } from './four/show-four/show-four.component';
+import { FiveComponent } from './five/five.component';
+import { AddEditFiveComponent } from './five/add-edit-five/add-edit-five.component';
+import { ShowFiveComponent } from './five/show-five/show-five.component';
+import { SixComponent } from './six/six.component';
+import { AddEditSixComponent } from './six/add-edit-six/add-edit-six.component';
+import { ShowSixComponent } from './six/show-six/show-six.component';
+import { AddEditSevenComponent } from './seven/add-edit-seven/add-edit-seven.component';
+import { ShowSevenComponent } from './seven/show-seven/show-seven.component';
+import { SevenComponent } from './seven/seven.component';
 
 @NgModule({
   declarations: [
@@ -280,7 +301,28 @@ import { ShowHealtComponent } from './healt/show-healt/show-healt.component';
     ShowMealsComponent,
     HealtComponent,
     AddEditHealtComponent,
-    ShowHealtComponent
+    ShowHealtComponent,
+    OneComponent,
+    AddEditOneComponent,
+    ShowOneComponent,
+    TwoComponent,
+    AddEditTwoComponent,
+    ShowTwoComponent,
+    ThreeComponent,
+    AddEditThreeComponent,
+    ShowThreeComponent,
+    FourComponent,
+    AddEditFourComponent,
+    ShowFourComponent,
+    FiveComponent,
+    AddEditFiveComponent,
+    ShowFiveComponent,
+    SixComponent,
+    AddEditSixComponent,
+    ShowSixComponent,
+    AddEditSevenComponent,
+    ShowSevenComponent,
+    SevenComponent
   ],
   imports: [
     BrowserModule,

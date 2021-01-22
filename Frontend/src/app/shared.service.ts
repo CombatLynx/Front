@@ -1275,4 +1275,200 @@ export class SharedService {
   publishHealtsInfo() {
     return this.http.get(this.APIUrl + '/healts/publish/');
   }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Сведения о наличии средств обучения и воспитания
+
+  getOnesInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/ones/');
+  }
+
+  addOnesInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/ones/' + id, val);
+  }
+
+  updateOnesInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/ones/' + id, val);
+  }
+
+  deleteOnesInfo(val: any){
+    return this.http.delete(this.APIUrl + '/ones/' + val);
+  }
+
+  getOnesInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/ones/format');
+  }
+
+  publishOnesInfo() {
+    return this.http.get(this.APIUrl + '/ones/publish/');
+  }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Сведения о доступе к информационным системам и информационно-телекоммуникационным сетям
+
+  getTwosInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/twos/');
+  }
+
+  addTwosInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/twos/' + id, val);
+  }
+
+  updateTwosInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/twos/' + id, val);
+  }
+
+  deleteTwosInfo(val: any){
+    return this.http.delete(this.APIUrl + '/twos/' + val);
+  }
+
+  getTwosInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/twos/format');
+  }
+
+  publishTwosInfo() {
+    return this.http.get(this.APIUrl + '/twos/publish/');
+  }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Наличие в образовательной организации электронной информационно-образовательной среды
+
+  getThreesInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/threes/');
+  }
+
+  addThreesInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/threes/' + id, val);
+  }
+
+  updateThreesInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/threes/' + id, val);
+  }
+
+  deleteThreesInfo(val: any){
+    return this.http.delete(this.APIUrl + '/threes/' + val);
+  }
+
+  getThreesInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/threes/format');
+  }
+
+  publishThreesInfo() {
+    return this.http.get(this.APIUrl + '/threes/publish/');
+  }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Наличие собственных электронных образовательных и информационных ресурсов
+
+  getFoursInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/fours/');
+  }
+
+  addFoursInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/fours/' + id, val);
+  }
+
+  updateFoursInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/fours/' + id, val);
+  }
+
+  deleteFoursInfo(val: any){
+    return this.http.delete(this.APIUrl + '/fours/' + val);
+  }
+
+  getFoursInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/fours/format');
+  }
+
+  publishFoursInfo() {
+    return this.http.get(this.APIUrl + '/fours/publish/');
+  }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Наличие сторонних электронных образовательных и информационных ресурсов
+
+  getFivesInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/fives/');
+  }
+
+  addFivesInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/fives/' + id, val);
+  }
+
+  updateFivesInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/fives/' + id, val);
+  }
+
+  deleteFivesInfo(val: any){
+    return this.http.delete(this.APIUrl + '/fives/' + val);
+  }
+
+  getFivesInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/fives/format');
+  }
+
+  publishFivesInfo() {
+    return this.http.get(this.APIUrl + '/fives/publish/');
+  }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Наличие базы данных электронного каталога
+
+  getSixsInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/sixs/');
+  }
+
+  addSixsInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/sixs/' + id, val);
+  }
+
+  updateSixsInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/sixs/' + id, val);
+  }
+
+  deleteSixsInfo(val: any){
+    return this.http.delete(this.APIUrl + '/sixs/' + val);
+  }
+
+  getSixsInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/sixs/format');
+  }
+
+  publishSixsInfo() {
+    return this.http.get(this.APIUrl + '/sixs/publish/');
+  }
+
+
+// ------------- Материально-техническое обеспечение и оснащенность образовательного процесса -----------------------------------
+// Ссылки на перечень электронных образовательных ресурсов
+
+  getSevensInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/sevens/');
+  }
+
+  addSevensInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/sevens/' + id, val);
+  }
+
+  updateSevensInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/sevens/' + id, val);
+  }
+
+  deleteSevensInfo(val: any){
+    return this.http.delete(this.APIUrl + '/sevens/' + val);
+  }
+
+  getSevensInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/sevens/format');
+  }
+
+  publishSevensInfo() {
+    return this.http.get(this.APIUrl + '/sevens/publish/');
+  }
 }
