@@ -1,264 +1,30 @@
   <nav class="navbar navbar-expand-sm bg-light navbar-dark">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <button routerLink="department"
-                class="m-1 btn btn-light btn-outline-primary" Button>СТРУКТУРНЫЕ ПОДРАЗДЕЛЕНИЯ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</button>
-      </li>
 
-      <li class="nav-item">
-        <button routerLink="employee"
-                class="m-1 btn btn-light btn-outline-primary" Button>ОСНОВНЫЕ СВЕДЕНИЯ</button>
-      </li>
-<!----------------------------------------------------------------------------------------->
-      <li class="nav-item">
-        <button routerLink="basicInformations"
-                class="m-1 btn btn-light btn-outline-primary" Button>BASIC INFORMATIONS</button>
-      </li>
-<!----------------------------------------------------------------------------------------->
-      <li class="nav-item">
-        <button routerLink="uchred"
-                class="m-1 btn btn-light btn-outline-primary" Button>УЧРЕДИТЕЛИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</button>
-      </li>
+      <app-osnovsveden> </app-osnovsveden>
 
-      <li class="nav-item">
-        <button routerLink="filiation"
-                class="m-1 btn btn-light btn-outline-primary" Button>ФИЛИАЛЫ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</button>
-      </li>
+      <app-structandorgan> </app-structandorgan>
 
-      <li class="nav-item">
-        <button routerLink="representation"
-                class="m-1 btn btn-light btn-outline-primary" Button>ПРЕДСТАВИТЕЛЬСТВО ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</button>
-      </li>
+      <app-obrazovanie> </app-obrazovanie>
 
-      <li class="nav-item">
-        <button routerLink="management"
-                class="m-1 btn btn-light btn-outline-primary" Button>ОРГАНЫ УПРАВЛЕНИЯ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</button>
-      </li>
+      <app-obrazstandarts> </app-obrazstandarts>
 
-      <li class="nav-item">
-        <button routerLink="volume"
-                class="m-1 btn btn-light btn-outline-primary" Button>ФИНАНСОВО-ЭКОНОМИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ</button>
-      </li>
+      <app-rucovodstvo> </app-rucovodstvo>
 
-      <li class="nav-item">
-        <button routerLink="vac"
-                class="m-1 btn btn-light btn-outline-primary" Button>ВАКАНТНЫЕ МЕСТА ДЛЯ ПРИЁМА (ПЕРЕВОДА)</button>
-      </li>
+      <app-mto> </app-mto>
 
-      <li class="nav-item">
-        <button routerLink="leader"
-                class="m-1 btn btn-light btn-outline-primary" Button>ИНФОРМАЦИЯ ОБ АДМИНИСТРАЦИИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ (РЕКТОР)</button>
-      </li>
+      <app-stipendi> </app-stipendi>
 
-      <li class="nav-item">
-        <button routerLink="leadersTwo"
-                class="m-1 btn btn-light btn-outline-primary" Button>ИНФОРМАЦИЯ ОБ АДМИНИСТРАЦИИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ (ЗАМЕСТИТЕЛИ)</button>
-      </li>
+      <app-platnobrazusl> </app-platnobrazusl>
 
-      <li class="nav-item">
-        <button routerLink="filialLeader"
-                class="m-1 btn btn-light btn-outline-primary" Button>ИНФОРМАЦИЯ О РУКОВОДИТЕЛЯХ ФИЛИАЛОВ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</button>
-      </li>
+      <app-finecdeyatelnost> </app-finecdeyatelnost>
 
-      <li class="nav-item">
-        <button routerLink="teacher"
-                class="m-1 btn btn-light btn-outline-primary" Button>ИНФОРМАЦИЯ О ПЕРСОНАЛЬНОМ СОСТАВЕ ПЕДАГОГИЧЕСКИХ РАБОТНИКОВ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</button>
-      </li>
+      <app-vacantmest> </app-vacantmest>
 
-      <li class="nav-item">
-        <button routerLink="standart"
-                class="m-1 btn btn-light btn-outline-primary" Button>ОБРАЗОВАТЕЛЬНЫЕ СТАНДАРТЫ</button>
-      </li>
+      <app-dostsreda> </app-dostsreda>
 
-      <li class="nav-item">
-        <button routerLink="paid"
-                class="m-1 btn btn-light btn-outline-primary" Button>ПЛАТНЫЕ ОБРАЗОВАТЕЛЬНЫЕ УСЛУГИ</button>
-      </li>
+      <app-megdunarodsotr> </app-megdunarodsotr>
 
-      <li class="nav-item">
-        <button routerLink="dog"
-                class="m-1 btn btn-light btn-outline-primary" Button>ИНФОРМАЦИЯ О ЗАКЛЮЧЕННЫХ И ПЛАНИРУЕМЫХ К ЗАКЛЮЧЕНИЮ ДОГОВОРАХ С ИНОСТРАННЫМИ И (ИЛИ) МЕЖДУНАРОДНЫМИ ОРГАНИЗАЦИЯМИ ПО ВОПРОСАМ ОБРАЗОВАНИЯ И НАУКИ</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="accr"
-                class="m-1 btn btn-light btn-outline-primary" Button>ИНФОРМАЦИЯ О МЕЖДУНАРОДНОЙ АККРЕДИТАЦИИ</button>
-      </li>
-<!--      ------------------------------------------- Доступная среда -------------------------------------------------        -->
-      <li class="nav-item">
-        <button routerLink="cab"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о специально оборудованных учебных кабинетах</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="prac"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о приспособленных объектах для проведения практических занятий</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="lib"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о библиотеке(ах)</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="sport"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения об объектах спорта</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="meal"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения об условиях питания обучающихся</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="health"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения об условиях охраны здоровья обучающихся</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="ovz"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="link"
-                class="m-1 btn btn-light btn-outline-primary" Button>Ссылки на перечень электронных образовательных ресурсов</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="ovztwo"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения 2</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="grant"
-                class="m-1 btn btn-light btn-outline-primary" Button>ЛОКАЛЬНЫЕ НОРМАТИВНЫЕ АКТЫ, КОТОРЫМИ РЕГЛАМЕНТИРУЮТСЯ НАЛИЧИЕ И УСЛОВИЯ ПРЕДОСТАВЛЕНИЯ СТИПЕНДИЙ</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="grantinfo"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация об общежитиях и интернатах</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="act"
-                class="m-1 btn btn-light btn-outline-primary" Button>Копия локального нормативного акта, регламентирующего размер платы за пользование жилым помещением и коммунальные услуги в общежитии</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="job"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация о трудоустройстве выпускников</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="gos"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация о реализуемых уровнях образования, о формах обучения</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="prof"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о профессионально-общественной аккредитации образовательной программы (при наличии)</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="inf"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация о численности обучающихся по реализуемым образовательным программам по источникам финансирования</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="admis"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация о результатах приема</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="perev"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация о результатах перевода, восстановления и отчисления</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="obraz"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация об образовательной программе</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="practices"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация об адаптированной образовательной программе</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="sciencs"
-                class="m-1 btn btn-light btn-outline-primary" Button>Информация о направлениях и результатах научной (научно-исследовательской) деятельности</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="svedorg"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о каждом месте осуществления образовательной деятельности</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="facilits"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о наличии оборудованных учебных кабинетов</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="objPracts"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о наличии объектов для проведения практических занятий</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="librares"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения наличии библиотек</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="sports"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о наличии объектов спорта</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="meals"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения об условиях питания обучающихся</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="healts"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения об условиях охраны здоровья обучающихся</button>
-      </li>
-<!--  --------------------------------      МТО  (1 - 7 таблица)   ----------------------------------------------------    -->
-      <li class="nav-item">
-        <button routerLink="one"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о наличии средств обучения и воспитания</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="two"
-                class="m-1 btn btn-light btn-outline-primary" Button>Сведения о доступе к информационным системам и информационно-телекоммуникационным сетям</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="three"
-                class="m-1 btn btn-light btn-outline-primary" Button>Наличие в образовательной организации электронной информационно-образовательной среды</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="four"
-                class="m-1 btn btn-light btn-outline-primary" Button>Наличие собственных электронных образовательных и информационных ресурсов</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="five"
-                class="m-1 btn btn-light btn-outline-primary" Button>Наличие сторонних электронных образовательных и информационных ресурсов</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="six"
-                class="m-1 btn btn-light btn-outline-primary" Button>Наличие базы данных электронного каталога</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="seven"
-                class="m-1 btn btn-light btn-outline-primary" Button>Ссылки на перечень электронных образовательных ресурсов</button>
-      </li>
     </ul>
   </nav>
 

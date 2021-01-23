@@ -163,6 +163,19 @@ import { ShowSixComponent } from './six/show-six/show-six.component';
 import { AddEditSevenComponent } from './seven/add-edit-seven/add-edit-seven.component';
 import { ShowSevenComponent } from './seven/show-seven/show-seven.component';
 import { SevenComponent } from './seven/seven.component';
+import { OsnovsvedenComponent } from './osnovsveden/osnovsveden.component';
+import { StructandorganComponent } from './structandorgan/structandorgan.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { ObrazovanieComponent } from './obrazovanie/obrazovanie.component';
+import { ObrazstandartsComponent } from './obrazstandarts/obrazstandarts.component';
+import { RucovodstvoComponent } from './rucovodstvo/rucovodstvo.component';
+import { MtoComponent } from './mto/mto.component';
+import { StipendiComponent } from './stipendi/stipendi.component';
+import { PlatnobrazuslComponent } from './platnobrazusl/platnobrazusl.component';
+import { FinecdeyatelnostComponent } from './finecdeyatelnost/finecdeyatelnost.component';
+import { VacantmestComponent } from './vacantmest/vacantmest.component';
+import { DostsredaComponent } from './dostsreda/dostsreda.component';
+import { MegdunarodsotrComponent } from './megdunarodsotr/megdunarodsotr.component';
 
 @NgModule({
   declarations: [
@@ -322,7 +335,20 @@ import { SevenComponent } from './seven/seven.component';
     ShowSixComponent,
     AddEditSevenComponent,
     ShowSevenComponent,
-    SevenComponent
+    SevenComponent,
+    OsnovsvedenComponent,
+    StructandorganComponent,
+    DocumentsComponent,
+    ObrazovanieComponent,
+    ObrazstandartsComponent,
+    RucovodstvoComponent,
+    MtoComponent,
+    StipendiComponent,
+    PlatnobrazuslComponent,
+    FinecdeyatelnostComponent,
+    VacantmestComponent,
+    DostsredaComponent,
+    MegdunarodsotrComponent
   ],
   imports: [
     BrowserModule,
