@@ -35,13 +35,31 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Информация о структуре и органах управления образовательной организацией
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th> Наименование структурного подразделения (органа управления) </th>
+    <th> Фамилия, имя, отчество руководителя структурного подразделения </th>
+    <th> Должность руководителя структурного подразделения </th>
+    <th> Место нахождения структурного подразделения </th>
+    <th> Адрес официального сайта в сети «Интернет» структурного подразделения </th>
+    <th> Адрес электронной почты структурных подразделений </th>
+    <th> Копия положения о структурном подразделении (об органе управления) </th>
+  </tr>
+<!--  <tr class="top__menu">-->
+<!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+<!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of DepartmentInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+    <td *ngFor="let value of dataItem; let i = index">
+      <span *ngIf="TableFormatTypes[i] != 'file'">{{value}}</span>
+      <a href="" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">{{value}}</a>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"

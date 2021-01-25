@@ -88,11 +88,26 @@ export class SharedService {
     return this.http.put(this.APIUrl + '/subdivisions/' + id, val);
   }
 
+  uploadFile(file: any){
+    const uploadData = new FormData();
+    console.log(file);
+    console.log(file.name);
+    uploadData.append('upload_file', file, file.name);
+    return this.http.post(this.APIUrl + '/upload-file/', uploadData, {
+      reportProgress: true, // Без observe: 'events' не работает
+      observe: 'events', // без reportProgress: true только HttpEventType.Sent и HttpEventType.Response
+    });
+  }
+
+  downloadFile(filename: string){
+    window.open(this.APIUrl + '/download-file/' + filename);
+  }
+
   deleteDepartmentInfo(val: any){
     return this.http.delete(this.APIUrl + '/subdivisions/' + val);
   }
 
-  getDepartmentInfoFormat(): Observable<any[]> {
+  getDepartmentInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/subdivisions/format');
   }
 
