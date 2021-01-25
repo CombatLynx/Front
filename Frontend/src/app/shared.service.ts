@@ -159,7 +159,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/founders/' + val);
   }
 
-  getUchredInfoFormat(): Observable<any[]> {
+  getUchredInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/founders/format');
   }
 
