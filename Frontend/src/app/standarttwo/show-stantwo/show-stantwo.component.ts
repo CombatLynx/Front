@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {SharedService} from '../../shared.service';
 
 @Component({
-  selector: 'app-show-fil',
-  templateUrl: './show-fil.component.html',
-  styleUrls: ['./show-fil.component.scss']
+  selector: 'app-show-stantwo',
+  templateUrl: './show-stantwo.component.html',
+  styleUrls: ['./show-stantwo.component.scss']
 })
-export class ShowFilComponent implements OnInit {
+export class ShowStantwoComponent implements OnInit {
 
   constructor(private service: SharedService) { }
 
-  FiliationInfoList: any = [];
+  StandartTwoInfoList: any = [];
   TableFormat: any = [];
   TableFormatTypes: any = [];
   ModalTitle: string;
@@ -23,7 +23,7 @@ export class ShowFilComponent implements OnInit {
 
   addClick(){
     this.base = {};
-    this.ModalTitle = 'Add FiliationInfo';
+    this.ModalTitle = 'Add StandartTwoInfo';
     this.ActivateAddEditBaseComp = true;
 
   }
@@ -31,13 +31,13 @@ export class ShowFilComponent implements OnInit {
   editClick(item){
     console.log(item);
     this.base = item;
-    this.ModalTitle = 'Edit FiliationInfo';
+    this.ModalTitle = 'Edit StandartTwoInfo';
     this.ActivateAddEditBaseComp = true;
   }
 
   deleteClick(item){
     if (confirm('Вы действительно хотите удалить эти данные?')){
-      this.service.deleteFiliationInfo(item[0]).subscribe(data => {
+      this.service.deleteStandartTwoInfo(item[0]).subscribe(data => {
         alert(data.toString());
         this.refreshBaseList();
       });
@@ -46,7 +46,7 @@ export class ShowFilComponent implements OnInit {
 
   renderClick(){
     if (confirm('Вы действительно хотите опубликовать эти данные?')){
-      this.service.publishFiliationInfo().subscribe(data => {
+      this.service.publishStandartTwoInfo().subscribe(data => {
         alert(data.toString());
         this.refreshBaseList();
       });
@@ -60,7 +60,7 @@ export class ShowFilComponent implements OnInit {
 
 
   refreshBaseList(){
-    this.service.getFiliationInfoList().subscribe(data => {
+    this.service.getStandartTwoInfoList().subscribe(data => {
       const arr: any[] = [];
       // tslint:disable-next-line:forin
       for (const item of data.data) {
@@ -71,7 +71,7 @@ export class ShowFilComponent implements OnInit {
         }
         arr.push(tmp);
       }
-      this.FiliationInfoList = arr;
+      this.StandartTwoInfoList = arr;
       this.TableFormat = data.format;
       this.TableFormatTypes = data.types;
       console.log(arr);
@@ -92,5 +92,6 @@ export class ShowFilComponent implements OnInit {
       alert( 'Please disable your Pop-up blocker and try again.');
     }
   }
+
 
 }

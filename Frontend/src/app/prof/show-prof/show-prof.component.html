@@ -35,9 +35,21 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Сведения о профессионально-общественной аккредитации образовательной программы (при наличии)
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Сведения о коде специальности, направления подготовки</th>
+    <th>Сведения о наименовании специальности, направления подготовки</th>
+    <th>Сведения о наименовании аккредитующей организации</th>
+    <th>Срок действия профессионально-общественной аккредитации образовательной программы</th>
+  </tr>
+<!--  <tr class="top__menu">-->
+<!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+<!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of ProfsInfoList">

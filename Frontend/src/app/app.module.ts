@@ -176,6 +176,9 @@ import { FinecdeyatelnostComponent } from './finecdeyatelnost/finecdeyatelnost.c
 import { VacantmestComponent } from './vacantmest/vacantmest.component';
 import { DostsredaComponent } from './dostsreda/dostsreda.component';
 import { MegdunarodsotrComponent } from './megdunarodsotr/megdunarodsotr.component';
+import { StandarttwoComponent } from './standarttwo/standarttwo.component';
+import { AddEditStantwoComponent } from './standarttwo/add-edit-stantwo/add-edit-stantwo.component';
+import { ShowStantwoComponent } from './standarttwo/show-stantwo/show-stantwo.component';
 
 @NgModule({
   declarations: [
@@ -348,7 +351,10 @@ import { MegdunarodsotrComponent } from './megdunarodsotr/megdunarodsotr.compone
     FinecdeyatelnostComponent,
     VacantmestComponent,
     DostsredaComponent,
-    MegdunarodsotrComponent
+    MegdunarodsotrComponent,
+    StandarttwoComponent,
+    AddEditStantwoComponent,
+    ShowStantwoComponent
   ],
   imports: [
     BrowserModule,

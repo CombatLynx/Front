@@ -24,7 +24,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-practices [practices]="base" *ngIf="ActivateAddEditBaseComp">
+        <app-add-edit-practices [prac]="base" *ngIf="ActivateAddEditBaseComp">
         </app-add-edit-practices>
       </div>
     </div>
@@ -35,13 +35,35 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Информация об адаптированной образовательной программе
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Код специальности, направления подготовки</th>
+    <th>Наименование специальности, направления подготовки</th>
+    <th>Реализуемый уровень образования (АОП)</th>
+    <th>Форма обучения</th>
+    <th>Описание образовательной программы с приложением ее копии, в случае описания реализуемой адаптированной образовательной программы</th>
+    <th>Ссылка на учебный план с приложением его копии (для адаптированной образовательной программы)</th>
+    <th>Ссылки на аннотации к рабочим программам дисциплин (по каждой дисциплине в составе образовательной программы) с приложением их копий (для адаптированной образовательной программы)</th>
+    <th>Ссылка на календарный учебный график с приложением его копии (для адаптированной образовательной программы)</th>
+    <th>Ссылки на нормативные и методические документы, разработанные образовательной организацией для обеспечения образовательного процесса (для адаптированной образовательной программы)</th>
+    <th>Информация о практиках, предусмотренных соответствующей образовательной программой (для адаптированной образовательной программы)</th>
+    <th>Информация об использовании при реализации образовательной программы электронного обучения и дистанционных образовательных технологий (для адаптированной образовательной программы)</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of PracticesInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+    <td *ngFor="let value of dataItem; let i = index">
+      <span *ngIf="TableFormatTypes[i] != 'file'">{{value}}</span>
+      <a href="" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">{{value}}</a>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"

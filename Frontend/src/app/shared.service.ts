@@ -185,7 +185,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/filiations/' + val);
   }
 
-  getFiliationInfoFormat(): Observable<any[]> {
+  getFiliationInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/filiations/format');
   }
 
@@ -211,7 +211,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/representations/' + val);
   }
 
-  getRepresentationInfoFormat(): Observable<any[]> {
+  getRepresentationInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/representations/format');
   }
 
@@ -424,13 +424,41 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/standartCopies/' + val);
   }
 
-  getStandartInfoFormat(): Observable<any[]> {
+  getStandartInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/standartCopies/format');
   }
 
   publishStandartInfo() {
     return this.http.get(this.APIUrl + '/standartCopies/publish/');
   }
+
+
+// -------------------------------- ОБРАЗОВАТЕЛЬНЫЕ СТАНДАРТЫ 2 -------------------------------------------------
+
+  getStandartTwoInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/standartCopiestwos/');
+  }
+
+  addStandartTwoInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/standartCopiestwos/' + id, val);
+  }
+
+  updateStandartTwoInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/standartCopiestwos/' + id, val);
+  }
+
+  deleteStandartTwoInfo(val: any){
+    return this.http.delete(this.APIUrl + '/standartCopiestwos/' + val);
+  }
+
+  getStandartTwoInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/standartCopiestwos/format');
+  }
+
+  publishStandartTwoInfo() {
+    return this.http.get(this.APIUrl + '/standartCopiestwos/publish/');
+  }
+
 
 // -------------------------------- ПЛАТНЫЕ ОБРАЗОВАТЕЛЬНЫЕ УСЛУГИ -------------------------------------------------
 
@@ -1029,7 +1057,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/obrazs/' + val);
   }
 
-  getObrazInfoFormat(): Observable<any[]> {
+  getObrazInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/obrazs/format');
   }
 
@@ -1057,7 +1085,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/practics/' + val);
   }
 
-  getPracticesInfoFormat(): Observable<any[]> {
+  getPracticesInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/practics/format');
   }
 
@@ -1085,7 +1113,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/sciencs/' + val);
   }
 
-  getSciencsInfoFormat(): Observable<any[]> {
+  getSciencsInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/sciencs/format');
   }
 

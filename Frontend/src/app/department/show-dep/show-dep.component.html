@@ -57,8 +57,8 @@
   <tbody>
   <tr *ngFor="let dataItem of DepartmentInfoList">
     <td *ngFor="let value of dataItem; let i = index">
-      <span *ngIf="TableFormatTypes[i] != 'file'">{{value}}</span>
-      <a href="" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">{{value}}</a>
+      <span>{{value}}</span>
+      <button class="btn-outline-primary" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">Скачать</button>
     </td>
     <td>
       <button type="button" class="btn btn-light mr-1"

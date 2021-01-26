@@ -35,13 +35,30 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Сведения о каждом представительстве образовательной организации (в том числе находящихся за пределами Российской Федерации)
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Сведения о наименовании представительства образовательной организации</th>
+    <th>Сведения о месте нахождения представительства образовательной организации</th>
+    <th>Сведения о графике работы представительства образовательной организации</th>
+    <th>Сведения о контактных телефонах представительства образовательной организации</th>
+    <th>Сведения об адресах электронной почты представительства образовательной организации</th>
+    <th>Сведения об адресе официального сайта представительства или странице в сети «Интернет»</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of RepresentationInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+    <td *ngFor="let value of dataItem; let i = index">
+      <span *ngIf="TableFormatTypes[i] != 'file'">{{value}}</span>
+      <a href="" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">{{value}}</a>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"

@@ -12,7 +12,7 @@ export class ShowObrazComponent implements OnInit {
 
   ObrazInfoList: any = [];
   TableFormat: any = [];
-
+  TableFormatTypes: any = [];
   ModalTitle: string;
   ActivateAddEditBaseComp = false;
   base: any;
@@ -73,8 +73,25 @@ export class ShowObrazComponent implements OnInit {
       }
       this.ObrazInfoList = arr;
       this.TableFormat = data.format;
+      this.TableFormatTypes = data.types;
       console.log(arr);
     });
   }
+
+  downloadFileFromServer(filename: string) {
+    console.log('downloading ' + filename);
+    this.service.downloadFile(filename);
+  }
+
+  downloadFile(data: any) {
+    console.log(data);
+    const blob = new Blob([data]);
+    const url = window.URL.createObjectURL(blob);
+    const pwa = window.open(url);
+    if (!pwa || pwa.closed || typeof pwa.closed === undefined) {
+      alert( 'Please disable your Pop-up blocker and try again.');
+    }
+  }
+
 
 }

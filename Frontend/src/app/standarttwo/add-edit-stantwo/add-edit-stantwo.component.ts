@@ -2,15 +2,15 @@ import {Component, Input, OnInit} from '@angular/core';
 import {SharedService} from '../../shared.service';
 
 @Component({
-  selector: 'app-add-edit-fil',
-  templateUrl: './add-edit-fil.component.html',
-  styleUrls: ['./add-edit-fil.component.scss']
+  selector: 'app-add-edit-stantwo',
+  templateUrl: './add-edit-stantwo.component.html',
+  styleUrls: ['./add-edit-stantwo.component.scss']
 })
-export class AddEditFilComponent implements OnInit {
+export class AddEditStantwoComponent implements OnInit {
 
   constructor(private service: SharedService) { }
 
-  @Input() fil: any;
+  @Input() stantwo: any;
   Keys: any[] = [];
   Values: any[] = [];
   Types: any[] = [];
@@ -23,30 +23,30 @@ export class AddEditFilComponent implements OnInit {
       //   this.Values.push('');
       // }
     }
-    this.Values = this.fil;
+    this.Values = this.stantwo;
     // tslint:disable-next-line:prefer-for-of
   }
 
-  addFiliation(){
+  addStandartTwo(){
     const json = {id: this.Values[0]};
     for (let i = 0; i < this.Keys.length; i++) {
       json[String(this.Keys[i])] = String(this.Values[i]);
     }
     console.log(this.Values);
     console.log(json);
-    this.service.addFiliationInfoList(json.id, json).subscribe(res => {
+    this.service.addStandartTwoInfoList(json.id, json).subscribe(res => {
       alert(res.toString());
     });
   }
 
-  updateFiliation(){
+  updateStandartTwo(){
     const json = {id: this.Values[0]};
     for (let i = 0; i < this.Keys.length; i++) {
       json[String(this.Keys[i])] = String(this.Values[i]);
     }
     console.log(json);
     console.log(this.Files);
-    this.service.updateFiliationInfo(json.id, json).subscribe(res => {
+    this.service.updateStandartTwoInfo(json.id, json).subscribe(res => {
       alert(res.toString());
       console.log(this.Files);
       for (const file of this.Files.values()) {
@@ -62,7 +62,7 @@ export class AddEditFilComponent implements OnInit {
   }
 
   refreshBaseList(){
-    this.service.getFiliationInfoFormat().subscribe(data => {
+    this.service.getStandartTwoInfoFormat().subscribe(data => {
       this.Keys = data.format;
       this.Types = data.types;
       console.log(data);
@@ -76,4 +76,5 @@ export class AddEditFilComponent implements OnInit {
     this.Values[index] = fileData.name;
     console.log(fileData.name);
   }
+
 }

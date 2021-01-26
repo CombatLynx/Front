@@ -24,8 +24,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-sciencs [sciencs]="base" *ngIf="ActivateAddEditBaseComp">
-        </app-add-edit-sciencs>
+        <app-add-edit-stantwo [stantwo]="base" *ngIf="ActivateAddEditBaseComp">
+        </app-add-edit-stantwo>
       </div>
     </div>
   </div>
@@ -37,27 +37,23 @@
   <thead>
   <tr>
     <th colspan="8" class="position">
-      Информация о направлениях и результатах научной (научно-исследовательской) деятельности и научно-исследовательской базе для ее осуществления (для образовательных организаций высшего образования и организаций дополнительного профессионального образования)
+      Сведения о федеральных государственных образовательных стандартах с размещением их копий и (или) гиперссылки на соответствующие документы
     </th>
   </tr>
   <tr>
     <th> </th>
-    <th>Код специальности/направления подготовки</th>
-    <th>Наименование профессии, специальности/направления подготовки</th>
-    <th>Реализуемый уровень образования(НИР)</th>
-    <th>Перечень научных направлений, в рамках которых ведется научная (научно-исследовательская) деятельность</th>
-    <th>Результаты научной (научно-исследовательской) деятельности</th>
-    <th>Сведения о научно-исследовательской базе для осуществления научной (научно-исследовательской) деятельности</th>
+    <th>Код и наименование специальности</th>
+    <th>ФГОС</th>
   </tr>
   <!--  <tr class="top__menu">-->
   <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
   <!--  </tr>-->
   </thead>
   <tbody>
-  <tr *ngFor="let dataItem of SciencsInfoList">
+  <tr *ngFor="let dataItem of StandartTwoInfoList">
     <td *ngFor="let value of dataItem; let i = index">
-      <span *ngIf="TableFormatTypes[i] != 'file'">{{value}}</span>
-      <a href="" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">{{value}}</a>
+      <span>{{value}}</span>
+      <button class="btn-outline-primary" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">Скачать</button>
     </td>
     <td>
       <button type="button" class="btn btn-light mr-1"

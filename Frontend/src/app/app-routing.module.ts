@@ -53,6 +53,7 @@ import {FourComponent} from './four/four.component';
 import {FiveComponent} from './five/five.component';
 import {SixComponent} from './six/six.component';
 import {SevenComponent} from './seven/seven.component';
+import {StandarttwoComponent} from './standarttwo/standarttwo.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -69,6 +70,7 @@ const routes: Routes = [
   {path: 'filialLeader', component: FilialComponent},
   {path: 'teacher', component: TeacherComponent},
   {path: 'standart', component: StandartComponent},
+  {path: 'standarttwo', component: StandarttwoComponent},
   {path: 'paid', component: PaidComponent},
   {path: 'dog', component: InternationaldogComponent},
   {path: 'accr', component: InternationalaccrComponent},
