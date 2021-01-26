@@ -24,7 +24,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-filial [filial]="base" *ngIf="ActivateAddEditBaseComp">
+        <app-add-edit-filial [fillead]="base" *ngIf="ActivateAddEditBaseComp">
         </app-add-edit-filial>
       </div>
     </div>
@@ -35,13 +35,29 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Наличие на сайте информации о руководителях филиалов образовательной организации (при наличии филиалов)
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Наименование филиала образовательной организации</th>
+    <th>Фамилия, имя, отчество руководителя филиала образовательной организации</th>
+    <th>Должность руководителя филиала образовательной организации</th>
+    <th>Контактные телефоны руководителя филиала образовательной организации</th>
+    <th>Адреса электронной почты руководителя филиала образовательной организации</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of FilialLeaderInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+    <td *ngFor="let value of dataItem; let i = index">
+      <span>{{value}}</span>
+      <button class="btn-outline-primary" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">Скачать</button>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"

@@ -24,7 +24,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-teach [teach]="base" *ngIf="ActivateAddEditBaseComp">
+        <app-add-edit-teach [teacher]="base" *ngIf="ActivateAddEditBaseComp">
         </app-add-edit-teach>
       </div>
     </div>
@@ -35,13 +35,35 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Информация о персональном составе педагогических работников
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Ф.И.О. педагогического работника образовательной организации</th>
+    <th>Занимаемая должность (должности) педагогического работника</th>
+    <th>Преподаваемые педагогическим работником дисциплины</th>
+    <th>Уровень образования</th>
+    <th>Квалификация</th>
+    <th>Учёная степень педагогического работника (при наличии)</th>
+    <th>Учёное звание педагогического работника (при наличии)</th>
+    <th>Наименование направления подготовки и (или) специальности педагогического работника</th>
+    <th>Данные о повышении квалификации и (или) профессиональной переподготовке педагогического работника (при наличии)</th>
+    <th>Общий стаж работы педагогического работника</th>
+    <th>Стаж работы педагогического работника по специальности</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of TeacherInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+    <td *ngFor="let value of dataItem; let i = index">
+      <span>{{value}}</span>
+      <button class="btn-outline-primary" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">Скачать</button>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"

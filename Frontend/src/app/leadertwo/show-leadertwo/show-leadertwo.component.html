@@ -24,7 +24,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-leadertwo [leaderTwo]="base" *ngIf="ActivateAddEditBaseComp">
+        <app-add-edit-leadertwo [leadertwo]="base" *ngIf="ActivateAddEditBaseComp">
         </app-add-edit-leadertwo>
       </div>
     </div>
@@ -35,13 +35,28 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Информация о заместителях руководителя образовательной организации
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Фамилия, имя, отчество (при наличии) заместителя руководителя</th>
+    <th>Должность заместителя руководителя</th>
+    <th>Контактные телефоны заместителя руководителя</th>
+    <th>Адрес электронной почты заместителя руководителя</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of LeaderTwoInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+    <td *ngFor="let value of dataItem; let i = index">
+      <span>{{value}}</span>
+      <button class="btn-outline-primary" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">Скачать</button>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"

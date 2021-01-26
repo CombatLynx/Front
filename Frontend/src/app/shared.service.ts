@@ -317,7 +317,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/leaders/' + val);
   }
 
-  getLeaderInfoFormat(): Observable<any[]> {
+  getLeaderInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/leaders/format');
   }
 
@@ -344,7 +344,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/leadersTwo/' + val);
   }
 
-  getLeaderTwoInfoFormat(): Observable<any[]> {
+  getLeaderTwoInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/leadersTwo/format');
   }
 
@@ -371,7 +371,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/filialLeaders/' + val);
   }
 
-  getFilialLeaderInfoFormat(): Observable<any[]> {
+  getFilialLeaderInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/filialLeaders/format');
   }
 
@@ -398,7 +398,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/teachers/' + val);
   }
 
-  getTeacherInfoFormat(): Observable<any[]> {
+  getTeacherInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/teachers/format');
   }
 

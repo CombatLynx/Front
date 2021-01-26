@@ -12,7 +12,7 @@ export class ShowLeaderComponent implements OnInit {
 
   LeaderInfoList: any = [];
   TableFormat: any = [];
-
+  TableFormatTypes: any = [];
   ModalTitle: string;
   ActivateAddEditBaseComp = false;
   base: any;
@@ -23,15 +23,14 @@ export class ShowLeaderComponent implements OnInit {
 
   addClick(){
     this.base = {};
-    this.ModalTitle = 'Add ManagementInfo';
+    this.ModalTitle = 'Add LeaderInfo';
     this.ActivateAddEditBaseComp = true;
-
   }
 
   editClick(item){
     console.log(item);
     this.base = item;
-    this.ModalTitle = 'Edit ManagementInfo';
+    this.ModalTitle = 'Edit LeaderInfo';
     this.ActivateAddEditBaseComp = true;
   }
 
@@ -73,8 +72,25 @@ export class ShowLeaderComponent implements OnInit {
       }
       this.LeaderInfoList = arr;
       this.TableFormat = data.format;
+      this.TableFormatTypes = data.types;
       console.log(arr);
     });
   }
+
+  downloadFileFromServer(filename: string) {
+    console.log('downloading ' + filename);
+    this.service.downloadFile(filename);
+  }
+
+  downloadFile(data: any) {
+    console.log(data);
+    const blob = new Blob([data]);
+    const url = window.URL.createObjectURL(blob);
+    const pwa = window.open(url);
+    if (!pwa || pwa.closed || typeof pwa.closed === undefined) {
+      alert( 'Please disable your Pop-up blocker and try again.');
+    }
+  }
+
 
 }
