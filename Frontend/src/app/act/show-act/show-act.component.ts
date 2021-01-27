@@ -10,9 +10,9 @@ export class ShowActComponent implements OnInit {
 
   constructor(private service: SharedService) { }
 
-  ActsInfoInfoList: any = [];
+  ActsInfoList: any = [];
   TableFormat: any = [];
-
+  TableFormatTypes: any = [];
   ModalTitle: string;
   ActivateAddEditBaseComp = false;
   base: any;
@@ -23,7 +23,7 @@ export class ShowActComponent implements OnInit {
 
   addClick(){
     this.base = {};
-    this.ModalTitle = 'Add DepartmentInfo';
+    this.ModalTitle = 'Add ActsInfo';
     this.ActivateAddEditBaseComp = true;
 
   }
@@ -31,7 +31,7 @@ export class ShowActComponent implements OnInit {
   editClick(item){
     console.log(item);
     this.base = item;
-    this.ModalTitle = 'Edit DepartmentInfo';
+    this.ModalTitle = 'Edit ActsInfo';
     this.ActivateAddEditBaseComp = true;
   }
 
@@ -71,10 +71,26 @@ export class ShowActComponent implements OnInit {
         }
         arr.push(tmp);
       }
-      this.ActsInfoInfoList = arr;
+      this.ActsInfoList = arr;
       this.TableFormat = data.format;
+      this.TableFormatTypes = data.types;
       console.log(arr);
     });
+  }
+
+  downloadFileFromServer(filename: string) {
+    console.log('downloading ' + filename);
+    this.service.downloadFile(filename);
+  }
+
+  downloadFile(data: any) {
+    console.log(data);
+    const blob = new Blob([data]);
+    const url = window.URL.createObjectURL(blob);
+    const pwa = window.open(url);
+    if (!pwa || pwa.closed || typeof pwa.closed === undefined) {
+      alert( 'Please disable your Pop-up blocker and try again.');
+    }
   }
 
 }

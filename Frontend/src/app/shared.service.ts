@@ -245,7 +245,7 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/managements/publish/');
   }
 
-  //  --------------------------- ФИНАНСОВО-ЭКОНОМИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ ----------------------------------
+  //  --------------------------- ФИНАНСОВО-хозяйственная ДЕЯТЕЛЬНОСТЬ ----------------------------------
 
   getVolumeInfoList(): Observable<any> {
     return this.http.get<any>(this.APIUrl + '/volumes/');
@@ -270,6 +270,35 @@ export class SharedService {
   publishVolumeInfo() {
     return this.http.get(this.APIUrl + '/volumes/publish/');
   }
+
+
+//  --------------------------- ФИНАНСОВО-хозяйственная ДЕЯТЕЛЬНОСТЬ ----------------------------------
+// Информация о поступлении и расходовании финансовых и материальных средств
+
+  getRushInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/rushs/');
+  }
+
+  addRushInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/rushs/' + id, val);
+  }
+
+  updateRushInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/rushs/' + id, val);
+  }
+
+  deleteRushInfo(val: any){
+    return this.http.delete(this.APIUrl + '/rushs/' + val);
+  }
+
+  getRushInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/rushs/format');
+  }
+
+  publishRushInfo() {
+    return this.http.get(this.APIUrl + '/rushs/publish/');
+  }
+
 
   //  --------------------------- ВАКАНТНЫЕ МЕСТА ДЛЯ ПРИЁМА (ПЕРЕВОДА) ----------------------------------
 
@@ -478,7 +507,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/paidServices/' + val);
   }
 
-  getPaidInfoFormat(): Observable<any[]> {
+  getPaidInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/paidServices/format');
   }
 
@@ -805,7 +834,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/grants/' + val);
   }
 
-  getGrantsInfoFormat(): Observable<any[]> {
+  getGrantsInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/grants/format');
   }
 
@@ -843,6 +872,34 @@ export class SharedService {
 
 
 // -------------------------- СТИПЕНДИИ И ИНЫЕ ВИДЫ МАТЕРИАЛЬНОЙ ПОДДЕРЖКИ -----------------------------------
+// ---------------------------------------- Информация 2 -------------------------------------------------------
+
+  getGrantInfoTwosInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/grantInfoTwos/');
+  }
+
+  addGrantInfoTwosInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/grantInfoTwos/' + id, val);
+  }
+
+  updateGrantInfoTwosInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/grantInfoTwos/' + id, val);
+  }
+
+  deleteGrantInfoTwosInfo(val: any){
+    return this.http.delete(this.APIUrl + '/grantInfoTwos/' + val);
+  }
+
+  getGrantInfoTwosInfoFormat(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/grantInfoTwos/format');
+  }
+
+  publishGrantInfoTwosInfo() {
+    return this.http.get(this.APIUrl + '/grantInfoTwos/publish/');
+  }
+
+
+// -------------------------- СТИПЕНДИИ И ИНЫЕ ВИДЫ МАТЕРИАЛЬНОЙ ПОДДЕРЖКИ -----------------------------------
 // Копия локального нормативного акта, регламентирующего размер платы за пользование жилым помещением и коммунальные услуги в общежитии
 
   getActsInfoList(): Observable<any> {
@@ -861,7 +918,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/acts/' + val);
   }
 
-  getActsInfoFormat(): Observable<any[]> {
+  getActsInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/acts/format');
   }
 
@@ -1507,7 +1564,7 @@ export class SharedService {
     return this.http.delete(this.APIUrl + '/sevens/' + val);
   }
 
-  getSevensInfoFormat(): Observable<any[]> {
+  getSevensInfoFormat(): Observable<any> {
     return this.http.get<any[]>(this.APIUrl + '/sevens/format');
   }
 

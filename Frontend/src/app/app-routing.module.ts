@@ -54,6 +54,8 @@ import {FiveComponent} from './five/five.component';
 import {SixComponent} from './six/six.component';
 import {SevenComponent} from './seven/seven.component';
 import {StandarttwoComponent} from './standarttwo/standarttwo.component';
+import {GrantinfotwoComponent} from './grantinfotwo/grantinfotwo.component';
+import {RashComponent} from './rash/rash.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -64,6 +66,7 @@ const routes: Routes = [
   {path: 'representation', component: RepresentationComponent},
   {path: 'management', component: ManagementComponent},
   {path: 'volume', component: VolumeComponent},
+  {path: 'rush', component: RashComponent},
   {path: 'vac', component: VacComponent},
   {path: 'leader', component: LeaderComponent},
   {path: 'leadersTwo', component: LeadertwoComponent},
@@ -85,6 +88,7 @@ const routes: Routes = [
   {path: 'ovztwo', component: OvztwoComponent},
   {path: 'grant', component: GrantComponent},
   {path: 'grantinfo', component: GrantinfoComponent},
+  {path: 'grantinfotwo', component: GrantinfotwoComponent},
   {path: 'act', component: ActComponent},
   {path: 'job', component: JobComponent},
   {path: 'gos', component: GosComponent},

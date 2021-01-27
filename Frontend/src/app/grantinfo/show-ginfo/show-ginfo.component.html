@@ -35,9 +35,24 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Информация об общежитиях и интернатах (часть 1)
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Информация о предоставлении стипендии обучающимся</th>
+    <th>Информация об иных видах материальной поддержки обучающихся</th>
+    <th>Сведения о наличии общежития</th>
+    <th>Количество интернатов</th>
+    <th>Общая площадь общежитий</th>
+    <th>Общая площадь интернатов</th>
+    <th>Жилая площадь общежитий</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of GrantInfosInfoList">

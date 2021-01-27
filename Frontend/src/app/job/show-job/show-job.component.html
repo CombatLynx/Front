@@ -35,9 +35,25 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Информация о трудоустройстве выпускников
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Код специальности, направления подготовки</th>
+    <th>Наименование профессии, специальности, направления подготовки</th>
+    <th>Кол-во выпускников (2017)</th>
+    <th>Кол-во трудоустроенных выпускников (2017)</th>
+    <th>Кол-во выпускников (2018)</th>
+    <th>Кол-во трудоустроенных выпускников (2018)</th>
+    <th>Кол-во выпускников (2019)</th>
+    <th>Кол-во трудоустроенных выпускников (2019)</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of JobsInfoList">

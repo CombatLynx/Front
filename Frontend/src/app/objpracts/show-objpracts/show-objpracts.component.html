@@ -35,9 +35,20 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Сведения о наличии объектов для проведения практических занятий
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Адрес места нахождения</th>
+    <th>Наименование объекта для проведения практических занятий</th>
+    <th>Оснащенность объекта для проведения практических занятий</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of ObjPractsInfoList">

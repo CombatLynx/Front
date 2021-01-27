@@ -179,6 +179,12 @@ import { MegdunarodsotrComponent } from './megdunarodsotr/megdunarodsotr.compone
 import { StandarttwoComponent } from './standarttwo/standarttwo.component';
 import { AddEditStantwoComponent } from './standarttwo/add-edit-stantwo/add-edit-stantwo.component';
 import { ShowStantwoComponent } from './standarttwo/show-stantwo/show-stantwo.component';
+import { GrantinfotwoComponent } from './grantinfotwo/grantinfotwo.component';
+import { AddEditGranttwoComponent } from './grantinfotwo/add-edit-granttwo/add-edit-granttwo.component';
+import { ShowGranttwoComponent } from './grantinfotwo/show-granttwo/show-granttwo.component';
+import { RashComponent } from './rash/rash.component';
+import { AddEditRashComponent } from './rash/add-edit-rash/add-edit-rash.component';
+import { ShowRashComponent } from './rash/show-rash/show-rash.component';
 
 @NgModule({
   declarations: [
@@ -354,7 +360,13 @@ import { ShowStantwoComponent } from './standarttwo/show-stantwo/show-stantwo.co
     MegdunarodsotrComponent,
     StandarttwoComponent,
     AddEditStantwoComponent,
-    ShowStantwoComponent
+    ShowStantwoComponent,
+    GrantinfotwoComponent,
+    AddEditGranttwoComponent,
+    ShowGranttwoComponent,
+    RashComponent,
+    AddEditRashComponent,
+    ShowRashComponent
   ],
   imports: [
     BrowserModule,
