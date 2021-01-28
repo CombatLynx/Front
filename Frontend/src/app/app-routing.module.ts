@@ -56,10 +56,15 @@ import {SevenComponent} from './seven/seven.component';
 import {StandarttwoComponent} from './standarttwo/standarttwo.component';
 import {GrantinfotwoComponent} from './grantinfotwo/grantinfotwo.component';
 import {RashComponent} from './rash/rash.component';
+import {SvedenoneComponent} from './svedenone/svedenone.component';
+import {SvedentwoComponent} from './svedentwo/svedentwo.component';
+import {PlatComponent} from './plat/plat.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
   {path: 'employee', component: EmployeeComponent},
+  {path: 'svedenone', component: SvedenoneComponent},
+  {path: 'svedentwo', component: SvedentwoComponent},
   {path: 'department', component: DepartmentComponent},
   {path: 'uchred', component: UchredComponent},
   {path: 'filiation', component: FiliationComponent},
@@ -75,6 +80,7 @@ const routes: Routes = [
   {path: 'standart', component: StandartComponent},
   {path: 'standarttwo', component: StandarttwoComponent},
   {path: 'paid', component: PaidComponent},
+  {path: 'plat', component: PlatComponent},
   {path: 'dog', component: InternationaldogComponent},
   {path: 'accr', component: InternationalaccrComponent},
   {path: 'cab', component: CabComponent},

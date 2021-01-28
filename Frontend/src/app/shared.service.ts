@@ -141,6 +141,61 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/basic_informations/publish/');
   }
 
+
+// ------------------------- ОСНОВНЫЕ СВЕДЕНИЯ -----------------------------------------
+
+  getSvedenOneInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/svedenOnes/');
+  }
+
+  addSvedenOneInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/svedenOnes/' + id, val);
+  }
+
+  updateSvedenOneInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/svedenOnes/' + id, val);
+  }
+
+  deleteSvedenOneInfo(val: any){
+    return this.http.delete(this.APIUrl + '/svedenOnes/' + val);
+  }
+
+  getSvedenOneInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/svedenOnes/format');
+  }
+
+  publishSvedenOneInfo() {
+    return this.http.get(this.APIUrl + '/svedenOnes/publish/');
+  }
+
+
+// ------------------------- ОСНОВНЫЕ СВЕДЕНИЯ 2 -----------------------------------------
+
+  getSvedenTwoInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/svedenTwos/');
+  }
+
+  addSvedenTwoInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/svedenTwos/' + id, val);
+  }
+
+  updateSvedenTwoInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/svedenTwos/' + id, val);
+  }
+
+  deleteSvedenTwoInfo(val: any){
+    return this.http.delete(this.APIUrl + '/svedenTwos/' + val);
+  }
+
+  getSvedenTwoInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/svedenTwos/format');
+  }
+
+  publishSvedenTwoInfo() {
+    return this.http.get(this.APIUrl + '/svedenTwos/publish/');
+  }
+
+
 //  --------------------------- УЧРЕДИТЕЛИ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ ----------------------------------
 
   getUchredInfoList(): Observable<any> {
@@ -513,6 +568,33 @@ export class SharedService {
 
   publishPaidInfo() {
     return this.http.get(this.APIUrl + '/paidServices/publish/');
+  }
+
+
+// -------------------------------- ПЛАТНЫЕ ОБРАЗОВАТЕЛЬНЫЕ УСЛУГИ 2 -------------------------------------------------
+
+  getPlatInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/plats/');
+  }
+
+  addPlatInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/plats/' + id, val);
+  }
+
+  updatePlatInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/plats/' + id, val);
+  }
+
+  deletePlatInfo(val: any){
+    return this.http.delete(this.APIUrl + '/plats/' + val);
+  }
+
+  getPlatInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/plats/format');
+  }
+
+  publishPlatInfo() {
+    return this.http.get(this.APIUrl + '/plats/publish/');
   }
 
 // -------------------------------- МЕЖДУНАРОДНОЕ СОТРУДНИЧЕСТВО -------------------------------------------------

@@ -24,8 +24,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-link [link]="base" *ngIf="ActivateAddEditBaseComp">
-        </app-add-edit-link>
+        <app-add-edit-svedentwo [svedentwo]="base" *ngIf="ActivateAddEditBaseComp">
+        </app-add-edit-svedentwo>
       </div>
     </div>
   </div>
@@ -37,21 +37,24 @@
   <thead>
   <tr>
     <th colspan="8" class="position">
-      Ссылки на перечень электронных образовательных ресурсов, приспособленных для использования инвалидами и лицами с ограниченными возможностями здоровья
+      Сведения о каждом месте осуществления образовательной деятельности, в том числе не указываемых в соответствии с частью 4 статьи 91 Федерального закона от 29.12.2012 N 273-ФЗ "Об образовании в Российской Федерации" (Собрание законодательства Российской Федерации, 2012, N 53, ст. 7598; 2019, N 49, ст. 6962) в приложении к лицензии на осуществление образовательной деятельности
     </th>
   </tr>
   <tr>
     <th> </th>
     <th>№ п/п</th>
-    <th>Ссылка на ресурс</th>
+    <th>Адрес места осуществления образовательной деятельности</th>
   </tr>
   <!--  <tr class="top__menu">-->
   <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
   <!--  </tr>-->
   </thead>
   <tbody>
-  <tr *ngFor="let dataItem of LinkOvzsInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+  <tr *ngFor="let dataItem of SvedenTwoInfoList">
+    <td *ngFor="let value of dataItem; let i = index">
+      <span *ngIf="TableFormatTypes[i] != 'file'">{{value}}</span>
+      <a href="" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">{{value}}</a>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"

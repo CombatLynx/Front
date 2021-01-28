@@ -185,6 +185,15 @@ import { ShowGranttwoComponent } from './grantinfotwo/show-granttwo/show-granttw
 import { RashComponent } from './rash/rash.component';
 import { AddEditRashComponent } from './rash/add-edit-rash/add-edit-rash.component';
 import { ShowRashComponent } from './rash/show-rash/show-rash.component';
+import { SvedenoneComponent } from './svedenone/svedenone.component';
+import { AddEditSvedenoneComponent } from './svedenone/add-edit-svedenone/add-edit-svedenone.component';
+import { ShowSvedenoneComponent } from './svedenone/show-svedenone/show-svedenone.component';
+import { SvedentwoComponent } from './svedentwo/svedentwo.component';
+import { AddEditSvedentwoComponent } from './svedentwo/add-edit-svedentwo/add-edit-svedentwo.component';
+import { ShowSvedentwoComponent } from './svedentwo/show-svedentwo/show-svedentwo.component';
+import { PlatComponent } from './plat/plat.component';
+import { AddEditPlatComponent } from './plat/add-edit-plat/add-edit-plat.component';
+import { ShowPlatComponent } from './plat/show-plat/show-plat.component';
 
 @NgModule({
   declarations: [
@@ -366,7 +375,16 @@ import { ShowRashComponent } from './rash/show-rash/show-rash.component';
     ShowGranttwoComponent,
     RashComponent,
     AddEditRashComponent,
-    ShowRashComponent
+    ShowRashComponent,
+    SvedenoneComponent,
+    AddEditSvedenoneComponent,
+    ShowSvedenoneComponent,
+    SvedentwoComponent,
+    AddEditSvedentwoComponent,
+    ShowSvedentwoComponent,
+    PlatComponent,
+    AddEditPlatComponent,
+    ShowPlatComponent
   ],
   imports: [
     BrowserModule,

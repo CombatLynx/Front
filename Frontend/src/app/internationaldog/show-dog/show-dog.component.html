@@ -34,9 +34,20 @@
 
 <table class="table">
   <thead>
-  <tr class="top__menu">
-    <th *ngFor="let name of TableFormat">{{name}}</th>
+  <tr>
+    <th colspan="8" class="position">
+      Информация о заключенных и планируемых к заключению договорах с иностранными и (или) международными организациями по вопросам образования и науки
+    </th>
   </tr>
+  <tr>
+    <th> </th>
+    <th>Название государства</th>
+    <th>Наименование организации</th>
+    <th>Реквизиты договора (наименование, дата, номер, срок действия)</th>
+  </tr>
+  <!--  <tr class="top__menu">-->
+  <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
+  <!--  </tr>-->
   </thead>
   <tbody>
   <tr *ngFor="let dataItem of InternationalDogsInfoList">

@@ -24,8 +24,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <app-add-edit-link [link]="base" *ngIf="ActivateAddEditBaseComp">
-        </app-add-edit-link>
+        <app-add-edit-plat [plat]="base" *ngIf="ActivateAddEditBaseComp">
+        </app-add-edit-plat>
       </div>
     </div>
   </div>
@@ -37,21 +37,23 @@
   <thead>
   <tr>
     <th colspan="8" class="position">
-      Ссылки на перечень электронных образовательных ресурсов, приспособленных для использования инвалидами и лицами с ограниченными возможностями здоровья
+      Документ об установлении размера платы, взимаемой с родителей (законных представителей) за присмотр и уход за детьми, осваивающими образовательные программы дошкольного образования в организациях, осуществляющих образовательную деятельность, за содержание детей в образовательной организации, реализующей образовательные программы начального общего, основного общего или среднего общего образования
     </th>
   </tr>
   <tr>
     <th> </th>
-    <th>№ п/п</th>
-    <th>Ссылка на ресурс</th>
+    <th>Файл</th>
   </tr>
   <!--  <tr class="top__menu">-->
   <!--    <th *ngFor="let name of TableFormat">{{name}}</th>-->
   <!--  </tr>-->
   </thead>
   <tbody>
-  <tr *ngFor="let dataItem of LinkOvzsInfoList">
-    <td *ngFor="let value of dataItem">{{value}}</td>
+  <tr *ngFor="let dataItem of PlatInfoList">
+    <td *ngFor="let value of dataItem; let i = index">
+      <span>{{value}}</span>
+      <button class="btn-outline-primary" *ngIf="TableFormatTypes[i] == 'file'" (click)="downloadFileFromServer(value)">Скачать</button>
+    </td>
     <td>
       <button type="button" class="btn btn-light mr-1"
               data-toggle="modal" data-target="#exampleModal"
