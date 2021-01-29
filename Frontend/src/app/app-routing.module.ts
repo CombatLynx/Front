@@ -59,6 +59,22 @@ import {RashComponent} from './rash/rash.component';
 import {SvedenoneComponent} from './svedenone/svedenone.component';
 import {SvedentwoComponent} from './svedentwo/svedentwo.component';
 import {PlatComponent} from './plat/plat.component';
+import {DocaComponent} from './doca/doca.component';
+import {DocbComponent} from './docb/docb.component';
+import {DoceComponent} from './doce/doce.component';
+import {DocfComponent} from './docf/docf.component';
+import {DocdComponent} from './docd/docd.component';
+import {DocgComponent} from './docg/docg.component';
+import {DoccComponent} from './docc/docc.component';
+import {DochComponent} from './doch/doch.component';
+import {DociComponent} from './doci/doci.component';
+import {DocjComponent} from './docj/docj.component';
+import {DoclComponent} from './docl/docl.component';
+import {DocmComponent} from './docm/docm.component';
+import {DockComponent} from './dock/dock.component';
+import {DocnComponent} from './docn/docn.component';
+import {DocpComponent} from './docp/docp.component';
+import {DocoComponent} from './doco/doco.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -118,7 +134,23 @@ const routes: Routes = [
   {path: 'four', component: FourComponent},
   {path: 'five', component: FiveComponent},
   {path: 'six', component: SixComponent},
-  {path: 'seven', component: SevenComponent}
+  {path: 'seven', component: SevenComponent},
+  {path: 'doca', component: DocaComponent},
+  {path: 'docb', component: DocbComponent},
+  {path: 'docc', component: DoccComponent},
+  {path: 'docd', component: DocdComponent},
+  {path: 'doce', component: DoceComponent},
+  {path: 'docf', component: DocfComponent},
+  {path: 'docg', component: DocgComponent},
+  {path: 'doch', component: DochComponent},
+  {path: 'doci', component: DociComponent},
+  {path: 'docj', component: DocjComponent},
+  {path: 'dock', component: DockComponent},
+  {path: 'docl', component: DoclComponent},
+  {path: 'docm', component: DocmComponent},
+  {path: 'docn', component: DocnComponent},
+  {path: 'doco', component: DocoComponent},
+  {path: 'docp', component: DocpComponent}
 ];
 
 @NgModule({

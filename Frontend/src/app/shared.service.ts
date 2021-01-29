@@ -597,6 +597,438 @@ export class SharedService {
     return this.http.get(this.APIUrl + '/plats/publish/');
   }
 
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocaInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docas/');
+  }
+
+  addDocaInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docas/' + id, val);
+  }
+
+  updateDocaInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docas/' + id, val);
+  }
+
+  deleteDocaInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docas/' + val);
+  }
+
+  getDocaInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docas/format');
+  }
+
+  publishDocaInfo() {
+    return this.http.get(this.APIUrl + '/docas/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocbInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docbs/');
+  }
+
+  addDocbInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docbs/' + id, val);
+  }
+
+  updateDocbInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docbs/' + id, val);
+  }
+
+  deleteDocbInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docbs/' + val);
+  }
+
+  getDocbInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docbs/format');
+  }
+
+  publishDocbInfo() {
+    return this.http.get(this.APIUrl + '/docbs/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDoccInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/doccs/');
+  }
+
+  addDoccInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/doccs/' + id, val);
+  }
+
+  updateDoccInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/doccs/' + id, val);
+  }
+
+  deleteDoccInfo(val: any){
+    return this.http.delete(this.APIUrl + '/doccs/' + val);
+  }
+
+  getDoccInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/doccs/format');
+  }
+
+  publishDoccInfo() {
+    return this.http.get(this.APIUrl + '/doccs/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocdInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docds/');
+  }
+
+  addDocdInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docds/' + id, val);
+  }
+
+  updateDocdInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docds/' + id, val);
+  }
+
+  deleteDocdInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docds/' + val);
+  }
+
+  getDocdInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docds/format');
+  }
+
+  publishDocdInfo() {
+    return this.http.get(this.APIUrl + '/docds/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDoceInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/doces/');
+  }
+
+  addDoceInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/doces/' + id, val);
+  }
+
+  updateDoceInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/doces/' + id, val);
+  }
+
+  deleteDoceInfo(val: any){
+    return this.http.delete(this.APIUrl + '/doces/' + val);
+  }
+
+  getDoceInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/doces/format');
+  }
+
+  publishDoceInfo() {
+    return this.http.get(this.APIUrl + '/doces/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocfInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docfs/');
+  }
+
+  addDocfInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docfs/' + id, val);
+  }
+
+  updateDocfInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docfs/' + id, val);
+  }
+
+  deleteDocfInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docfs/' + val);
+  }
+
+  getDocfInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docfs/format');
+  }
+
+  publishDocfInfo() {
+    return this.http.get(this.APIUrl + '/docfs/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocgInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docgs/');
+  }
+
+  addDocgInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docgs/' + id, val);
+  }
+
+  updateDocgInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docgs/' + id, val);
+  }
+
+  deleteDocgInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docgs/' + val);
+  }
+
+  getDocgInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docgs/format');
+  }
+
+  publishDocgInfo() {
+    return this.http.get(this.APIUrl + '/docgs/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDochInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/dochs/');
+  }
+
+  addDochInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/dochs/' + id, val);
+  }
+
+  updateDochInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/dochs/' + id, val);
+  }
+
+  deleteDochInfo(val: any){
+    return this.http.delete(this.APIUrl + '/dochs/' + val);
+  }
+
+  getDochInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/dochs/format');
+  }
+
+  publishDochInfo() {
+    return this.http.get(this.APIUrl + '/dochs/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDociInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docis/');
+  }
+
+  addDociInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docis/' + id, val);
+  }
+
+  updateDociInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docis/' + id, val);
+  }
+
+  deleteDociInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docis/' + val);
+  }
+
+  getDociInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docis/format');
+  }
+
+  publishDociInfo() {
+    return this.http.get(this.APIUrl + '/docis/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocjInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docjs/');
+  }
+
+  addDocjInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docjs/' + id, val);
+  }
+
+  updateDocjInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docjs/' + id, val);
+  }
+
+  deleteDocjInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docjs/' + val);
+  }
+
+  getDocjInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docjs/format');
+  }
+
+  publishDocjInfo() {
+    return this.http.get(this.APIUrl + '/docjs/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDockInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docks/');
+  }
+
+  addDockInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docks/' + id, val);
+  }
+
+  updateDockInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docks/' + id, val);
+  }
+
+  deleteDockInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docks/' + val);
+  }
+
+  getDockInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docks/format');
+  }
+
+  publishDockInfo() {
+    return this.http.get(this.APIUrl + '/docks/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDoclInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docls/');
+  }
+
+  addDoclInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docls/' + id, val);
+  }
+
+  updateDoclInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docls/' + id, val);
+  }
+
+  deleteDoclInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docls/' + val);
+  }
+
+  getDoclInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docls/format');
+  }
+
+  publishDoclInfo() {
+    return this.http.get(this.APIUrl + '/docls/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocmInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docms/');
+  }
+
+  addDocmInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docms/' + id, val);
+  }
+
+  updateDocmInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docms/' + id, val);
+  }
+
+  deleteDocmInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docms/' + val);
+  }
+
+  getDocmInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docms/format');
+  }
+
+  publishDocmInfo() {
+    return this.http.get(this.APIUrl + '/docms/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocnInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docns/');
+  }
+
+  addDocnInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docns/' + id, val);
+  }
+
+  updateDocnInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docns/' + id, val);
+  }
+
+  deleteDocnInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docns/' + val);
+  }
+
+  getDocnInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docns/format');
+  }
+
+  publishDocnInfo() {
+    return this.http.get(this.APIUrl + '/docns/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocoInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docos/');
+  }
+
+  addDocoInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docos/' + id, val);
+  }
+
+  updateDocoInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docos/' + id, val);
+  }
+
+  deleteDocoInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docos/' + val);
+  }
+
+  getDocoInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docos/format');
+  }
+
+  publishDocoInfo() {
+    return this.http.get(this.APIUrl + '/docos/publish/');
+  }
+
+
+// -------------------------------- Документы -------------------------------------------------
+
+  getDocpInfoList(): Observable<any> {
+    return this.http.get<any>(this.APIUrl + '/docps/');
+  }
+
+  addDocpInfoList(id: number, val: any){
+    return this.http.post(this.APIUrl + '/docps/' + id, val);
+  }
+
+  updateDocpInfo(id: number, val: any){
+    return this.http.put(this.APIUrl + '/docps/' + id, val);
+  }
+
+  deleteDocpInfo(val: any){
+    return this.http.delete(this.APIUrl + '/docps/' + val);
+  }
+
+  getDocpInfoFormat(): Observable<any> {
+    return this.http.get<any[]>(this.APIUrl + '/docps/format');
+  }
+
+  publishDocpInfo() {
+    return this.http.get(this.APIUrl + '/docps/publish/');
+  }
+
 // -------------------------------- МЕЖДУНАРОДНОЕ СОТРУДНИЧЕСТВО -------------------------------------------------
 // ----- ИНФОРМАЦИЯ О ЗАКЛЮЧЕННЫХ И ПЛАНИРУЕМЫХ К ЗАКЛЮЧЕНИЮ ДОГОВОРАХ С ИНОСТРАННЫМИ И (ИЛИ) МЕЖДУНАРОДНЫМИ -----
 // -------------------------- ОРГАНИЗАЦИЯМИ ПО ВОПРОСАМ ОБРАЗОВАНИЯ И НАУКИ --------------------------------------

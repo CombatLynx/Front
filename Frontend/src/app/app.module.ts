@@ -194,6 +194,55 @@ import { ShowSvedentwoComponent } from './svedentwo/show-svedentwo/show-svedentw
 import { PlatComponent } from './plat/plat.component';
 import { AddEditPlatComponent } from './plat/add-edit-plat/add-edit-plat.component';
 import { ShowPlatComponent } from './plat/show-plat/show-plat.component';
+import { DocaComponent } from './doca/doca.component';
+import { AddEditDocaComponent } from './doca/add-edit-doca/add-edit-doca.component';
+import { ShowDocaComponent } from './doca/show-doca/show-doca.component';
+import { DocbComponent } from './docb/docb.component';
+import { AddEditDocbComponent } from './docb/add-edit-docb/add-edit-docb.component';
+import { ShowDocbComponent } from './docb/show-docb/show-docb.component';
+import { DoccComponent } from './docc/docc.component';
+import { AddEditDoccComponent } from './docc/add-edit-docc/add-edit-docc.component';
+import { ShowDoccComponent } from './docc/show-docc/show-docc.component';
+import { DocdComponent } from './docd/docd.component';
+import { AddEditDocdComponent } from './docd/add-edit-docd/add-edit-docd.component';
+import { ShowDocdComponent } from './docd/show-docd/show-docd.component';
+import { DoceComponent } from './doce/doce.component';
+import { AddEditDoceComponent } from './doce/add-edit-doce/add-edit-doce.component';
+import { ShowDoceComponent } from './doce/show-doce/show-doce.component';
+import { DocfComponent } from './docf/docf.component';
+import { AddEditDocfComponent } from './docf/add-edit-docf/add-edit-docf.component';
+import { ShowDocfComponent } from './docf/show-docf/show-docf.component';
+import { DocgComponent } from './docg/docg.component';
+import { AddEditDocgComponent } from './docg/add-edit-docg/add-edit-docg.component';
+import { ShowDocgComponent } from './docg/show-docg/show-docg.component';
+import { DochComponent } from './doch/doch.component';
+import { AddEditDochComponent } from './doch/add-edit-doch/add-edit-doch.component';
+import { ShowDochComponent } from './doch/show-doch/show-doch.component';
+import { DociComponent } from './doci/doci.component';
+import { AddEditDociComponent } from './doci/add-edit-doci/add-edit-doci.component';
+import { ShowDociComponent } from './doci/show-doci/show-doci.component';
+import { DocjComponent } from './docj/docj.component';
+import { AddEditDocjComponent } from './docj/add-edit-docj/add-edit-docj.component';
+import { ShowDocjComponent } from './docj/show-docj/show-docj.component';
+import { DockComponent } from './dock/dock.component';
+import { AddEditDockComponent } from './dock/add-edit-dock/add-edit-dock.component';
+import { ShowDockComponent } from './dock/show-dock/show-dock.component';
+import { DoclComponent } from './docl/docl.component';
+import { AddEditDoclComponent } from './docl/add-edit-docl/add-edit-docl.component';
+import { ShowDoclComponent } from './docl/show-docl/show-docl.component';
+import { DocmComponent } from './docm/docm.component';
+import { AddEditDocmComponent } from './docm/add-edit-docm/add-edit-docm.component';
+import { ShowDocmComponent } from './docm/show-docm/show-docm.component';
+import { DocnComponent } from './docn/docn.component';
+import { AddEditDocnComponent } from './docn/add-edit-docn/add-edit-docn.component';
+import { ShowDocnComponent } from './docn/show-docn/show-docn.component';
+import { DocoComponent } from './doco/doco.component';
+import { AddEditDocoComponent } from './doco/add-edit-doco/add-edit-doco.component';
+import { ShowDocoComponent } from './doco/show-doco/show-doco.component';
+import { DocpComponent } from './docp/docp.component';
+import { AddEditDocpComponent } from './docp/add-edit-docp/add-edit-docp.component';
+import { ShowDocpComponent } from './docp/show-docp/show-docp.component';
+import { DocumentiComponent } from './documenti/documenti.component';
 
 @NgModule({
   declarations: [
@@ -384,7 +433,56 @@ import { ShowPlatComponent } from './plat/show-plat/show-plat.component';
     ShowSvedentwoComponent,
     PlatComponent,
     AddEditPlatComponent,
-    ShowPlatComponent
+    ShowPlatComponent,
+    DocaComponent,
+    AddEditDocaComponent,
+    ShowDocaComponent,
+    DocbComponent,
+    AddEditDocbComponent,
+    ShowDocbComponent,
+    DoccComponent,
+    AddEditDoccComponent,
+    ShowDoccComponent,
+    DocdComponent,
+    AddEditDocdComponent,
+    ShowDocdComponent,
+    DoceComponent,
+    AddEditDoceComponent,
+    ShowDoceComponent,
+    DocfComponent,
+    AddEditDocfComponent,
+    ShowDocfComponent,
+    DocgComponent,
+    AddEditDocgComponent,
+    ShowDocgComponent,
+    DochComponent,
+    AddEditDochComponent,
+    ShowDochComponent,
+    DociComponent,
+    AddEditDociComponent,
+    ShowDociComponent,
+    DocjComponent,
+    AddEditDocjComponent,
+    ShowDocjComponent,
+    DockComponent,
+    AddEditDockComponent,
+    ShowDockComponent,
+    DoclComponent,
+    AddEditDoclComponent,
+    ShowDoclComponent,
+    DocmComponent,
+    AddEditDocmComponent,
+    ShowDocmComponent,
+    DocnComponent,
+    AddEditDocnComponent,
+    ShowDocnComponent,
+    DocoComponent,
+    AddEditDocoComponent,
+    ShowDocoComponent,
+    DocpComponent,
+    AddEditDocpComponent,
+    ShowDocpComponent,
+    DocumentiComponent
   ],
   imports: [
     BrowserModule,
