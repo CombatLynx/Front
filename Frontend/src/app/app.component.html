@@ -1,33 +1,45 @@
-  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-    <ul class="navbar-nav">
+<div style="text-align: center">
+  <h1>
+    Hello
+  </h1>
+  <input [(ngModel)]="input.username" placeholder="Username">
+  <br>
+  <input [(ngModel)]="input.password" placeholder="Password" type="password">
+  <br>
+  <button (click)="onRegister()"> Register User </button>
+  <button (click)="onLogin()"> Login User </button>
+</div>
 
-      <app-osnovsveden> </app-osnovsveden>
+<nav class="navbar navbar-expand-sm bg-light navbar-dark">
+  <ul class="navbar-nav">
 
-      <app-structandorgan> </app-structandorgan>
+    <app-osnovsveden> </app-osnovsveden>
 
-      <app-documenti> </app-documenti>
+    <app-structandorgan> </app-structandorgan>
 
-      <app-obrazovanie> </app-obrazovanie>
+    <app-documenti> </app-documenti>
 
-      <app-obrazstandarts> </app-obrazstandarts>
+    <app-obrazovanie> </app-obrazovanie>
 
-      <app-rucovodstvo> </app-rucovodstvo>
+    <app-obrazstandarts> </app-obrazstandarts>
 
-      <app-mto> </app-mto>
+    <app-rucovodstvo> </app-rucovodstvo>
 
-      <app-stipendi> </app-stipendi>
+    <app-mto> </app-mto>
 
-      <app-platnobrazusl> </app-platnobrazusl>
+    <app-stipendi> </app-stipendi>
 
-      <app-finecdeyatelnost> </app-finecdeyatelnost>
+    <app-platnobrazusl> </app-platnobrazusl>
 
-      <app-vacantmest> </app-vacantmest>
+    <app-finecdeyatelnost> </app-finecdeyatelnost>
 
-      <app-dostsreda> </app-dostsreda>
+    <app-vacantmest> </app-vacantmest>
 
-      <app-megdunarodsotr> </app-megdunarodsotr>
+    <app-dostsreda> </app-dostsreda>
 
-    </ul>
-  </nav>
+    <app-megdunarodsotr> </app-megdunarodsotr>
 
-  <router-outlet></router-outlet>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
