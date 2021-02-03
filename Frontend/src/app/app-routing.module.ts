@@ -75,6 +75,7 @@ import {DockComponent} from './dock/dock.component';
 import {DocnComponent} from './docn/docn.component';
 import {DocpComponent} from './docp/docp.component';
 import {DocoComponent} from './doco/doco.component';
+import {AllComponent} from './all/all.component';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
@@ -150,7 +151,8 @@ const routes: Routes = [
   {path: 'docm', component: DocmComponent},
   {path: 'docn', component: DocnComponent},
   {path: 'doco', component: DocoComponent},
-  {path: 'docp', component: DocpComponent}
+  {path: 'docp', component: DocpComponent},
+  {path: '**', component: AllComponent}
 ];
 
 @NgModule({

@@ -243,6 +243,7 @@ import { DocpComponent } from './docp/docp.component';
 import { AddEditDocpComponent } from './docp/add-edit-docp/add-edit-docp.component';
 import { ShowDocpComponent } from './docp/show-docp/show-docp.component';
 import { DocumentiComponent } from './documenti/documenti.component';
+import { AllComponent } from './all/all.component';
 
 @NgModule({
   declarations: [
@@ -482,7 +483,8 @@ import { DocumentiComponent } from './documenti/documenti.component';
     DocpComponent,
     AddEditDocpComponent,
     ShowDocpComponent,
-    DocumentiComponent
+    DocumentiComponent,
+    AllComponent
   ],
   imports: [
     BrowserModule,
