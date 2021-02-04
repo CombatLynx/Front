@@ -3,8 +3,8 @@
   <div *ngFor="let key of Keys; let i = index" class="col-sm-10">
     <label class="size col-sm-2 col-form-label">{{key}}</label>
     <label>
-      <input   type="text" class="form-control size" [(ngModel)]="Values[i]"
-               placeholder="Введите {{key}}">
+      <textarea   type="text" class="form-control size" [(ngModel)]="Values[i]"
+                  placeholder="Введите {{key}}"> </textarea>
     </label>
   </div>
 </div>

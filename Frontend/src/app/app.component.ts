@@ -20,24 +20,15 @@ export class AppComponent implements OnInit {
       password: ''
     };
   }
-  onRegister() {
-    this.userService.registerUser(this.input).subscribe(
-      response => {
-        alert('User' + this.input.username + 'created');
-      },
-      error => {
-        console.log('error', error);
-      }
-    );
-  }
+
   onLogin() {
     this.userService.loginUser(this.input).subscribe(
       response => {
         console.log(response);
-        alert('User' + this.input.username + 'logged');
+        alert('Пользователь ' + this.input.username + ' успешно авторизован');
       },
       error => {
-        console.log('error', error);
+        alert('Неправильный логин или пароль ');
       }
     );
   }

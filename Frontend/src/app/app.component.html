@@ -1,14 +1,18 @@
-<div style="text-align: center">
-  <h1>
-    Hello
-  </h1>
-  <input [(ngModel)]="input.username" placeholder="Username">
-  <br>
-  <input [(ngModel)]="input.password" placeholder="Password" type="password">
-  <br>
-  <button (click)="onRegister()"> Register User </button>
-  <button (click)="onLogin()"> Login User </button>
+<div class="map">
+  <h1>Authorization</h1>
+  <div class="row">
+    <div class="col login-panel">
+      <label class="login">Login</label>
+      <label><input [(ngModel)]="input.username" placeholder="Username" type="text" class="input-map" aria-label="Username"> </label>
+
+      <label class="password">Password</label>
+      <label><input [(ngModel)]="input.password" placeholder="Password" class="input-map" type="password"> </label>
+
+    </div>
+  </div>
+  <label> <button class="glow-button" type="button" (click)="onLogin()">Confirm</button> </label>
 </div>
+
 
 <!--<nav class="navbar navbar-expand-sm bg-light navbar-dark">-->
 <!--  <ul class="navbar-nav">-->

@@ -1,3 +1,42 @@
 * {
   background: rgb(234, 240, 252);
 }
+
+.map {
+  text-align: center;
+}
+
+.input-map {
+  border-radius: 3px;
+  height: 2em;
+  font-size: large;
+}
+
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login,
+.password {
+  font-weight: 700;
+}
+
+.glow-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 30px;
+  border-radius: 7px;
+  box-shadow: 0 0 13px 13px #2b72ff inset, 0 0 0 0 #2b72ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000000;
+  transition: .15s ease-in-out;
+}
+.glow-button:hover {
+  box-shadow: 0 0 10px 0 #195dff inset, 0 0 5px 2px #195dff;
+  color: #003dff;
+}
