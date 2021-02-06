@@ -244,6 +244,15 @@ import { AddEditDocpComponent } from './docp/add-edit-docp/add-edit-docp.compone
 import { ShowDocpComponent } from './docp/show-docp/show-docp.component';
 import { DocumentiComponent } from './documenti/documenti.component';
 import { AllComponent } from './all/all.component';
+import { LoginComponent } from './login/login.component';
+
+import { AuthGuardService } from './auth/auth-guard.service';
+import { AuthService } from './auth/auth.service';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -484,16 +493,28 @@ import { AllComponent } from './all/all.component';
     AddEditDocpComponent,
     ShowDocpComponent,
     DocumentiComponent,
-    AllComponent
+    AllComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter,
+        allowedDomains: ['localhost:4200'],
+        disallowedRoutes: ["http://example.com/examplebadroute/"],
+      }
+    })
   ],
-  providers: [SharedService],
+  providers: [
+    SharedService,
+    AuthGuardService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

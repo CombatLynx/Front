@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-
+import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
+import {Observable, throwError} from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import {tokenGetter} from './app.module';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,34 @@ import {Observable} from 'rxjs';
 export class SharedService {
   readonly APIUrl = 'http://127.0.0.1:8000/EmployeeApp';
   readonly PhotoUrl = 'http://127.0.0.1:8000/media/';
+  readonly LoginUrl = 'http://127.0.0.1:8000/EmployeeApp/login/';
+  private options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
 
   constructor(private http: HttpClient) { }
+
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error('An error occurred:', error.error.message);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      // console.log("here");
+      alert(error.error.non_field_errors);
+
+    }
+    // return an observable with a user-facing error message
+    return throwError(
+      'Something bad happened; please try again later.');
+  }
+
+  authenticate(username: string, password: string) {
+    const data = { 'username': username, 'password': password  };
+    return this.http.post(this.LoginUrl, data, this.options)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
 
   getDepList(): Observable<any[]>{
     return this.http.get<any[]>(this.APIUrl + '/department/');
@@ -77,7 +104,9 @@ export class SharedService {
 // ----------------------- СТРУКТУРНЫЕ ПОДРАЗДЕЛЕНИЯ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ -----------------------------------
 
   getDepartmentInfoList(): Observable<any> {
-    return this.http.get<any>(this.APIUrl + '/subdivisions/');
+    const token = tokenGetter();
+    const options = { headers: new HttpHeaders().set('Authorization', 'Bearer ' + token) };
+    return this.http.get<any>(this.APIUrl + '/subdivisions/', options);
   }
 
   addDepartmentInfoList(id: number, val: any){

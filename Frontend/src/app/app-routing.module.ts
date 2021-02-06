@@ -76,13 +76,15 @@ import {DocnComponent} from './docn/docn.component';
 import {DocpComponent} from './docp/docp.component';
 import {DocoComponent} from './doco/doco.component';
 import {AllComponent} from './all/all.component';
+import {LoginComponent} from './login/login.component';
+import {AuthGuardService} from './auth/auth-guard.service';
 
 const routes: Routes = [
   {path: 'basicInformations', component: BasicInformationComponent},
   {path: 'employee', component: EmployeeComponent},
   {path: 'svedenone', component: SvedenoneComponent},
   {path: 'svedentwo', component: SvedentwoComponent},
-  {path: 'department', component: DepartmentComponent},
+  {path: 'all/department', component: DepartmentComponent, canActivate: [AuthGuardService]},
   {path: 'uchred', component: UchredComponent},
   {path: 'filiation', component: FiliationComponent},
   {path: 'representation', component: RepresentationComponent},
@@ -152,7 +154,8 @@ const routes: Routes = [
   {path: 'docn', component: DocnComponent},
   {path: 'doco', component: DocoComponent},
   {path: 'docp', component: DocpComponent},
-  {path: '**', component: AllComponent}
+  {path: 'all', component: AllComponent, canActivate: [AuthGuardService]},
+  {path: '**', component: LoginComponent}
 ];
 
 @NgModule({
